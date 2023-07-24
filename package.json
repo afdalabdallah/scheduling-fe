@@ -10,7 +10,19 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18.16.19",
-    "nuxt": "^3.6.5"
+    "autoprefixer": "^10.4.14",
+    "daisyui": "^3.2.1",
+    "http-proxy-middleware": "^2.0.6",
+    "nuxt": "^3.6.5",
+    "postcss": "^8.4.26",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/google-fonts": "^3.0.1",
+    "nuxt-proxy": "^0.4.1",
+    "vue-router": "^4.2.4"
   }
 }
