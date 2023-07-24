@@ -20,7 +20,7 @@
 <script setup>
 import { ref } from 'vue';
 const { data: rumpun } = await useFetch("http://localhost:5000/rumpun");
-
+console.log(rumpun);
 const formData = ref({
     nama: '',
     kode_rmk: ''
