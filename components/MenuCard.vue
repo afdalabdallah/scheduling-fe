@@ -1,8 +1,8 @@
 <template>
     <div class="card card-hover">
-        <a href="/" class="card-hover-line">
+        <a :href="`${link}`" class="card-hover-line">
             <div class="p-[20px]">
-                <img :src="`${icon}`" alt="icon.png" class="mb-3" />
+                <img :src="`${icon}`" alt="icon.png" class="mb-3 w-5 h-5" />
                 <p class="font-bold">{{ title }}</p>
                 <p class="text-gray-500">{{ text }}</p>
                 <div class="flex justify-end mt-5">

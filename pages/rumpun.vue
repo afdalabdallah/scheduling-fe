@@ -33,8 +33,11 @@
 
 <script setup>
 import { ref } from "vue";
+import { useRoute } from "vue-router";
 const { data: rumpun } = await useFetch("http://localhost:5000/rumpun");
 console.log(rumpun);
+
+const route = useRoute()
 const formData = ref({
   nama: "",
   kode_rmk: "",

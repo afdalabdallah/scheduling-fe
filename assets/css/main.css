@@ -69,8 +69,6 @@ body {
   padding: 20px;
 }
 
-a {
-  color: #0168fa;
-  text-decoration: none;
-  background-color: transparent;
+.active-link {
+  background-color: #dcdddf;
 }
