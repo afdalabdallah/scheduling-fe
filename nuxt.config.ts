@@ -16,8 +16,13 @@ export default defineNuxtConfig({
     '/rumpun': 'http://localhost:5000/rumpun'
   },
   routeRules:{
-    '/rumpun/post':{
+    'api/rumpun/post':{
       proxy: {to: "http://localhost:5000/rumpun"}
-    }
+    },
+    '/api/matkul':{
+      proxy:{
+        to:"http://localhost:5000/matkul"
+      }
+    },
   }
 })
