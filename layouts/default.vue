@@ -6,7 +6,7 @@
     <!-- <SideBar /> -->
     <div class="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content">
+      <div class="drawer-content overflow-x-auto">
         <!-- Page content here -->
         <div class="p-[24px] pt-[100px]">
           <div class="lg:mr-[75px] lg:ml-[75px]">
@@ -19,7 +19,7 @@
       <div class="drawer-side z-20 lg:z-0">
         <label for="my-drawer-2" class="drawer-overlay"></label>
 
-        <ul class="menu p-4 lg:pt-[80px] w-2/4 h-screen bg-base-200 text-base-content">
+        <ul class="menu p-4 lg:pt-[80px] sm:w-2/4 h-screen bg-base-200 text-base-content">
           <!-- Sidebar content here -->
           <div class="flex justify-between items-center lg:hidden mb-5">
             <a class="flex gap-1 pl-2 " style="font-size: 22px; font-weight: 500;">
