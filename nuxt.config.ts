@@ -12,17 +12,22 @@ export default defineNuxtConfig({
     // '~/assets/css/dashforge.customs.css',
     // '~/assets/css/dashforge.dashboard.css'
   ],
-  proxy:{
-    '/rumpun': 'http://localhost:5000/rumpun'
+  proxy: {
+    '/api/rumpun': 'http://localhost:5000/rumpun'
   },
-  routeRules:{
-    'api/rumpun/post':{
-      proxy: {to: "http://localhost:5000/rumpun"}
+  routeRules: {
+    '/api/rumpun/post': {
+      proxy: { to: "http://localhost:5000/rumpun" }
     },
-    '/api/matkul':{
-      proxy:{
-        to:"http://localhost:5000/matkul"
+    '/api/matkul': {
+      proxy: {
+        to: "http://localhost:5000/matkul"
       }
     },
+    '/api/rumpun': {
+      proxy: {
+        to: "http://localhost:5000/rumpun"
+      }
+    }
   }
 })

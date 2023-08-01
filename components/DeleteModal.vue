@@ -21,7 +21,7 @@
             <div class="modal-action ">
                 <div class="btn bg-red-600 hover:bg-red-400" @click="deleteData(data.ID)">
                     <label :for="data.ID">
-                        YES
+                        YA
                     </label>
 
                 </div>

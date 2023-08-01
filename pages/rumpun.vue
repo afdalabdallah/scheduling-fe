@@ -34,7 +34,7 @@
 <script setup>
 import { ref } from "vue";
 import { useRoute } from "vue-router";
-const { data: rumpun } = await useFetch("http://localhost:5000/rumpun");
+const { data: rumpun } = await useFetch("http://localhost:3000/api/rumpun");
 console.log(rumpun);
 
 const route = useRoute()
@@ -44,7 +44,7 @@ const formData = ref({
 });
 const onSubmit = async () => {
   console.log(formData);
-  const { respons } = await useFetch("http://localhost:3000/rumpun/post", {
+  const { respons } = await useFetch("http://localhost:3000/api/rumpun/post", {
     method: "POST",
     body: {
       nama: formData.value.nama,

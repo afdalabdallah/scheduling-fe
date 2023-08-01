@@ -36,7 +36,7 @@
             <NuxtLink to="/" active-class="active-link">
               <div class="flex items-center gap-1">
                 <img class="w-[24px] h-[24px]" src="/img/beranda.svg" />
-                <a href="/">Beranda</a>
+                Beranda
               </div>
             </NuxtLink>
           </li>
@@ -44,7 +44,7 @@
             <NuxtLink to="/matakuliah" active-class="active-link">
               <div class="flex items-center gap-1">
                 <img class="w-[24px] h-[24px]" src="/img/mk.svg" />
-                <a href="/matakuliah">Mata Kuliah</a>
+                Mata Kuliah
               </div>
             </NuxtLink>
           </li>
@@ -52,7 +52,7 @@
             <NuxtLink to="/dosen" active-class="active-link">
               <div class="flex items-center gap-1">
                 <img class="w-[24px] h-[24px]" src="/img/dosen_icon.svg" />
-                <a href="/dosen">Dosen</a>
+                Dosen
               </div>
             </NuxtLink>
           </li>
@@ -62,7 +62,7 @@
             <NuxtLink to="/rumpun" active-class="active-link">
               <div class="flex items-center gap-1">
                 <img class="w-[24px] h-[24px]" src="/img/rumpun.svg" />
-                <a href="/rumpun">Rumpun Mata Kuliah</a>
+                Rumpun Mata Kuliah
               </div>
             </NuxtLink>
 
@@ -71,7 +71,7 @@
             <NuxtLink to="/perkuliahan" active-class="active-link">
               <div class="flex items-center gap-1">
                 <img class="w-[24px] h-[24px]" src="/img/perkuliahan_icon.svg" />
-                <a href="/perkuliahan">Perkuliahan</a>
+                Perkuliahan
               </div>
             </NuxtLink>
 
@@ -80,7 +80,7 @@
             <NuxtLink to="/jadwal" active-class="active-link">
               <div class="flex items-center gap-1">
                 <img class="w-[24px] h-[24px]" src="/img/jadwal_icon.svg" />
-                <a href="/jadwal">Generate Jadwal</a>
+                Generate Jadwal
               </div>
             </NuxtLink>
 
