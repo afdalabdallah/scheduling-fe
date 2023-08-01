@@ -13,7 +13,14 @@ export default defineNuxtConfig({
     // '~/assets/css/dashforge.dashboard.css'
   ],
   proxy: {
-    '/api/rumpun': 'http://localhost:5000/rumpun'
+    '/api/matkul/update': {
+      target: 'http://localhost:5000',
+      pathRewrite: (path, req) => {
+        const id = path.split('/').pop(); // Extract the dynamic :id parameter from the path
+        return `/matkul/${id}`;
+      },
+      changeOrigin: true,
+    },
   },
   routeRules: {
     '/api/rumpun/post': {
@@ -21,13 +28,20 @@ export default defineNuxtConfig({
     },
     '/api/matkul': {
       proxy: {
-        to: "http://localhost:5000/matkul"
+        to: "http://localhost:5000/matkul",
       }
     },
     '/api/rumpun': {
       proxy: {
-        to: "http://localhost:5000/rumpun"
+        to: "http://localhost:5000/rumpun",
+
       }
-    }
+    },
+    '/api/matkul/**': {
+      proxy: {
+        to: "http://localhost:5000/matkul/**",
+      }
+    },
+
   }
 })

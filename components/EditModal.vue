@@ -1,20 +1,13 @@
 <template>
     <!-- The button to open modal -->
-    <label :for="table" class="hidden sm:block add-btn bg-[#0081C9] rounded-[5px] px-1 py-[4px]  text-white">+
-        Tambah
-    </label>
-    <label :for="table"
-        class="sm:hidden text-center block add-btn bg-[#0081C9] rounded-[5px] px-1 py-[4px] max-[499px]:w-full  text-white">
-        +
-    </label>
+    <label :for="index" class=" bg-lime-600 p-1 rounded-md text-white">Edit</label>
+
     <!-- Put this part before </body> tag -->
-    <input type="checkbox" :id="table" class="modal-toggle" />
+    <input type="checkbox" :id="index" class="modal-toggle" />
     <div class="modal">
         <div class="modal-box">
-            <!-- MODAL CONTENT -->
-            <label :for="table" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</label>
-            <div class="mb-2 text-center text-cyan-400 text-2xl font-bold">
-                TAMBAH {{ formTitle }}
+            <div class="mb-2 text-center text-lime-600 text-2xl font-bold">
+                EDIT DATA
             </div>
             <form @submit.prevent="submitForm">
                 <div class="px-2 overflow-y-auto max-h-[500px]">
@@ -35,16 +28,13 @@
                 <div class="modal-action ">
                     <div class="btn bg-cyan-600 hover:bg-cyan-400 text-white">
                         <button type="submit">
-                            TAMBAH
+                            EDIT
                         </button>
 
                     </div>
-                    <label :for="table" class="btn bg-red-600 hover:bg-red-400 text-white">CLOSE</label>
+                    <label :for="index" class="btn bg-red-600 hover:bg-red-400 text-white">CLOSE</label>
                 </div>
             </form>
-            <!-- END OF CONTENT -->
-
-
         </div>
     </div>
 </template>
@@ -52,14 +42,19 @@
 <script setup>
 const emit = defineEmits(['inFocus', 'submit'])
 let show = true
-const formData = ref({})
+
 const props = defineProps(
     [
         'table',
+        'datas',
         'formFormat',
-        'formTitle',
+        'index'
     ]
 )
+
+const formData = ref({
+    ...props.datas
+})
 
 const submitForm = () => {
     // Emit the form data to the parent component

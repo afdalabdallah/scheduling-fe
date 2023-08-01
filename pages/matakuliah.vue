@@ -74,7 +74,8 @@
 
                             <td>
                                 <div class="flex gap-2">
-                                    <button>Edit</button>
+                                    <EditModal @formSubmitted="onSubmitEdit" v-bind:index="matkul.kode_mk"
+                                        v-bind:datas="matkul" v-bind:form-format="formFormat" table="Mata Kuliah" />
                                     <DeleteModal v-bind:data="matkul" v-bind:first="matkul.kode_mk"
                                         v-bind:second="matkul.nama" table="Mata Kuliah" />
                                 </div>
@@ -108,14 +109,7 @@ const fetchRumpun = async () => {
 }
 await fetchRumpun()
 
-const formData = ref({
-    // nama: "",
-    // kode_mk: "",
-    // tipe: "",
-    // sks: Number,
-    // semester: Number,
-    // rumpun_id: Number,
-});
+const formData = ref({});
 
 const onSubmit = async (formData) => {
     console.log("INI FORM DATA DARI PAGE");
@@ -133,6 +127,24 @@ const onSubmit = async (formData) => {
         headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
     });
     console.log("INI RESPONSE");
+    console.log(respons);
+    location.reload()
+}
+
+const onSubmitEdit = async (formData) => {
+    var baseUrl = "http://localhost:3000/api/matkul/" + formData.ID
+    const { respons } = await useFetch(baseUrl, {
+        method: "PUT",
+        body: {
+            nama: formData.nama,
+            kode_mk: formData.kode_mk,
+            tipe: formData.tipe,
+            sks: formData.sks,
+            semester: formData.semester,
+            rumpun_id: formData.rumpun_id,
+        },
+        headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
+    });
     console.log(respons);
     location.reload()
 }
