@@ -90,9 +90,23 @@
 </template>
 
 <script setup>
-const { data: mataKuliah } = await useFetch("http://localhost:3000/api/matkul");
-const { data: rumpun } = await useFetch("http://localhost:3000/api/rumpun");
 
+
+
+let mataKuliah = reactive([])
+const fetchMataKuliah = async () => {
+    const { data } = await useFetch("http://localhost:3000/api/matkul");
+    mataKuliah = data
+}
+
+await fetchMataKuliah()
+
+let rumpun = reactive([])
+const fetchRumpun = async () => {
+    const { data } = await useFetch("http://localhost:3000/api/rumpun");
+    rumpun = data
+}
+await fetchRumpun()
 
 const formData = ref({
     // nama: "",
@@ -120,7 +134,7 @@ const onSubmit = async (formData) => {
     });
     console.log("INI RESPONSE");
     console.log(respons);
-    // location.reload()
+    location.reload()
 }
 
 const rumpunArr = Array.isArray(rumpun.value) ? rumpun.value : [];
