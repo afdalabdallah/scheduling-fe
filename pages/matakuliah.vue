@@ -1,5 +1,6 @@
 <template>
     <div class="">
+        <p class=" font-bold text-xl mb-1">MATA KULIAH</p>
         <div class="bg-white rounded-lg">
             <div class="min-[500px]:flex p-2 items-center gap-4 overflow-x-auto ">
                 <button
@@ -12,7 +13,8 @@
                 </button>
                 <div class=" w-full ">
                     <div class="min-[500px]:flex justify-between ">
-                        <form class=" bg-[#E9F4FF] rounded-[5px] pl-2 pr-2 pt-[4px] pb-[4px] max-[499px]:mb-1">
+                        <form @submit.prevent="searchMatkul"
+                            class=" bg-[#E9F4FF] rounded-[5px] pl-2 pr-2 pt-[4px] pb-[4px] max-[499px]:mb-1">
                             <div class=" flex gap-3">
                                 <button type="submit">
                                     <img src="/img/Search.svg" />
@@ -76,8 +78,8 @@
                                 <div class="flex gap-2">
                                     <EditModal @formSubmitted="onSubmitEdit" v-bind:index="matkul.kode_mk"
                                         v-bind:datas="matkul" v-bind:form-format="formFormat" table="Mata Kuliah" />
-                                    <DeleteModal v-bind:data="matkul" v-bind:first="matkul.kode_mk"
-                                        v-bind:second="matkul.nama" table="Mata Kuliah" />
+                                    <DeleteModal @dataDeleted="deleteData" v-bind:data="matkul"
+                                        v-bind:first="matkul.kode_mk" v-bind:second="matkul.nama" table="Mata Kuliah" />
                                 </div>
                             </td>
                         </tr>
@@ -91,8 +93,6 @@
 </template>
 
 <script setup>
-
-
 
 let mataKuliah = reactive([])
 const fetchMataKuliah = async () => {
@@ -110,6 +110,18 @@ const fetchRumpun = async () => {
 await fetchRumpun()
 
 const formData = ref({});
+
+const deleteData = async (id) => {
+    var baseUrl = "http://localhost:5000/matkul/" + id
+    console.log(baseUrl);
+    const { response } = await useFetch(baseUrl, {
+        method: "DELETE",
+    });
+    console.log(response);
+    location.reload()
+    console.log("Data deleted!");
+
+}
 
 const onSubmit = async (formData) => {
     console.log("INI FORM DATA DARI PAGE");
@@ -147,6 +159,13 @@ const onSubmitEdit = async (formData) => {
     });
     console.log(respons);
     location.reload()
+}
+
+const filteredMatkul = []
+const searchMatkul = (string) => {
+    filteredMatkul = mataKuliah.filter((matkul) => {
+        return matkul.nama.includes(string)
+    })
 }
 
 const rumpunArr = Array.isArray(rumpun.value) ? rumpun.value : [];

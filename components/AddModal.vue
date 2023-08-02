@@ -21,10 +21,10 @@
                     <div v-for="data in formFormat" class="mb-2">
                         <label>{{ data.label }}</label><br>
                         <input class="w-full p-2 rounded-md border" v-if="data.type === 'text'" type="text"
-                            :placeholder="data.label" v-model="formData[data.name]" :name="data.name" />
+                            :placeholder="data.label" v-model="formData[data.name]" :name="data.name" required />
                         <input class="w-full p-2 rounded-md border" v-else-if="data.type === 'number'" type="number"
-                            :placeholder="data.label" v-model="formData[data.name]" :name="data.name" />
-                        <select class="w-full p-2 rounded-md border" v-model="formData[data.name]"
+                            :placeholder="data.label" v-model="formData[data.name]" :name="data.name" required />
+                        <select required class="w-full p-2 rounded-md border" v-model="formData[data.name]"
                             v-else-if="data.type === 'select'">
                             <option v-for="option in data.options" :value="option.val">{{ option.opt }}
                             </option>
@@ -34,9 +34,11 @@
                 </div>
                 <div class="modal-action ">
                     <div class="btn bg-cyan-600 hover:bg-cyan-400 text-white">
-                        <button type="submit">
-                            TAMBAH
-                        </button>
+                        <label :for="table">
+                            <button type="submit">
+                                TAMBAH
+                            </button>
+                        </label>
 
                     </div>
                     <label :for="table" class="btn bg-red-600 hover:bg-red-400 text-white">CLOSE</label>

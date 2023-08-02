@@ -19,38 +19,35 @@
                 </p>
             </div>
             <div class="modal-action ">
-                <div class="btn bg-red-600 hover:bg-red-400" @click="deleteData(data.ID)">
+                <div class="text-white btn bg-red-600 hover:bg-red-500" @click="deleteData(data.ID)">
                     <label :for="data.ID">
                         YA
                     </label>
 
                 </div>
-                <label :for="data.ID" class="btn bg-cyan-400 hover:bg-cyan-200">Tidak</label>
+                <label :for="data.ID" class="text-white btn bg-[#0081C9] hover:bg-blue-400">Tidak</label>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
+const emit = defineEmits(['inFocus', 'submit'])
 let show = true
 const props = defineProps(
     [
         'table',
         'data',
         'first',
-        'second'
+        'second',
+        'deleteFunction'
     ]
 )
 
-const deleteData = async (id) => {
-    var baseUrl = "http://localhost:5000/matkul/" + id
-    console.log(baseUrl);
-    const { response } = await useFetch(baseUrl, {
-        method: "DELETE",
-    });
-    console.log(response);
-    location.reload()
-    console.log("Data deleted!");
+const deleteData = (id) => {
+    emit('dataDeleted', id);
 }
+
+
 
 </script>

@@ -1,54 +1,114 @@
 <template>
-  <div>
-    <form @submit.prevent="onSubmit">
-      <input class="mb-2" type="text" v-model="formData.nama" id="nama" /><br />
-      <input type="text" v-model="formData.kode_rmk" id="kode_rmk" />
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-  <div>
-    <div>Rumpun:</div>
-    <div>
-      <div v-for="r in rumpun">
-        <span>{{ r.nama }}</span>
-        <!-- The button to open modal -->
-        <label v-bind:for="r.ID" class="btn">open modal</label>
+  <div class="">
+    <p class=" font-bold text-xl mb-1">RUMPUN MATA KULIAH</p>
+    <div class="bg-white rounded-lg">
+      <div class="min-[500px]:flex p-2 items-center gap-4 overflow-x-auto ">
+        <button class="max-[499px]:w-full filter-btn border-[#0081C9] border rounded-[5px] pl-2 pr-3 pt-[2px] pb-[2px]">
+          <div class="flex gap-2 justify-center">
+            <img class="w-[24px]" src="/img/Filter.svg" />
+            <p class="hidden sm:block">Filter</p>
+          </div>
 
-        <!-- Put this part before </body> tag -->
-        <input type="checkbox" v-bind:id="r.ID" class="modal-toggle" />
-        <div class="modal">
-          <div class="modal-box">
-            <h3 class="font-bold text-lg">{{ r.nama }}</h3>
-            <p class="py-4">{{ r.ID }}</p>
-            <div class="modal-action">
-              <label v-bind:for="r.ID" class="btn">Close!</label>
+        </button>
+        <div class=" w-full ">
+          <div class="min-[500px]:flex justify-between ">
+            <form @submit.prevent="searchMatkul"
+              class=" bg-[#E9F4FF] rounded-[5px] pl-2 pr-2 pt-[4px] pb-[4px] max-[499px]:mb-1">
+              <div class=" flex gap-3">
+                <button type="submit">
+                  <img src="/img/Search.svg" />
+                </button>
+
+                <div>
+                  <input class="bg-inherit" type="text" placeholder="Search" />
+                </div>
+
+              </div>
+            </form>
+            <div class="">
+              <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="RUMPUN" table="rumpun" />
             </div>
+
           </div>
         </div>
-        <button @click="deleteData(r.ID)">Delete</button>
+
       </div>
+      <div class=" overflow-x-auto">
+        <table class="table table-sm">
+          <!-- head -->
+          <thead class="bg-[#E9F4FF] border-none text-black">
+            <tr>
+              <th></th>
+              <th>Kode RMK</th>
+              <th>Nama</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(rumpun, index) in rumpuns">
+              <th>
+                {{ index + 1 }}
+              </th>
+              <td>
+                {{ rumpun.kode_rmk }}
+              </td>
+              <td>
+                {{ rumpun.nama }}
+              </td>
+              <td>
+                <div class="flex gap-2">
+                  <EditModal @formSubmitted="onSubmitEdit" v-bind:index="rumpun.kode_rmk" v-bind:datas="rumpun"
+                    v-bind:form-format="formFormat" table="Rumpun Mata Kuliah" />
+                  <DeleteModal @dataDeleted="deleteData" v-bind:data="rumpun" v-bind:first="rumpun.kode_rmk"
+                    v-bind:second="rumpun.nama" table="Rumpun Mata Kuliah" />
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import { useRoute } from "vue-router";
-const { data: rumpun } = await useFetch("http://localhost:3000/api/rumpun");
-console.log(rumpun);
 
-const route = useRoute()
+let rumpuns = reactive([])
+const fetchRumpun = async () => {
+  const { data } = await useFetch("http://localhost:3000/api/rumpun");
+  rumpuns = data
+}
+await fetchRumpun()
+
 const formData = ref({
   nama: "",
   kode_rmk: "",
 });
-const onSubmit = async () => {
+
+
+const formFormat = [
+  {
+    'label': "Nama RMK",
+    'name': "nama",
+    'type': 'text',
+  },
+  {
+    'label': "Kode RMK",
+    'name': "kode_rmk",
+    'type': 'text'
+  },
+]
+
+const onSubmit = async (formData) => {
   console.log(formData);
   const { respons } = await useFetch("http://localhost:3000/api/rumpun/post", {
     method: "POST",
     body: {
-      nama: formData.value.nama,
-      kode_rmk: formData.value.nama,
+      nama: formData.nama,
+      kode_rmk: formData.kode_rmk,
     },
     headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
   });
@@ -63,6 +123,20 @@ const deleteData = async (id) => {
     method: "DELETE",
   });
   console.log(response);
+  location.reload()
+}
+
+const onSubmitEdit = async (formData) => {
+  var baseUrl = "http://localhost:3000/api/rumpun/" + formData.ID
+  const { respons } = await useFetch(baseUrl, {
+    method: "PUT",
+    body: {
+      nama: formData.nama,
+      kode_rmk: formData.kode_rmk,
+    },
+    headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
+  });
+  console.log(respons);
   location.reload()
 }
 </script>
