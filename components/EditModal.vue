@@ -17,12 +17,33 @@
                             :placeholder="data.label" v-model="formData[data.name]" :name="data.name" required />
                         <input class="w-full p-2 rounded-md border" v-else-if="data.type === 'number'" type="number"
                             :placeholder="data.label" v-model="formData[data.name]" :name="data.name" required />
-                        <select class="w-full p-2 rounded-md border" v-model="formData[data.name]"
+                        <select class="w-full p-2 rounded-md border" v-model="formData[data.name]" :name="data.name"
                             v-else-if="data.type === 'select'" required>
-                            <option v-for="option in data.options" :value="option.val">{{ option.opt }}
+                            <option v-for="option in data.options" :value="option.val" :key="option.val">{{ option.opt }}
                             </option>
 
                         </select>
+                        <div v-else-if="data.type === 'checkbox'" class="flex gap-5">
+                            <div>
+                                Hari
+                                <div v-for="(day, index) in data.hari" :key="index">
+                                    <div class="flex gap-1">
+                                        <input :id="`day-${index}`" type="checkbox" v-model="formData[day]" :value="day" />
+                                        <label :for="`day-${index}`">{{ day }}</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                Sesi
+                                <div v-for="(sesi, index) in data.sesi" :key="index">
+                                    <div class="flex gap-1">
+                                        <input :id="`sesi-${index}`" type="checkbox" v-model="formData[sesi]"
+                                            :value="sesi" />
+                                        <label :for="`sesi-${index}`">{{ sesi }}</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-action ">

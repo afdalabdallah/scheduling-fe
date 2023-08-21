@@ -27,8 +27,8 @@
                             </div>
                         </form>
                         <div class="">
-                            <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="MATA KULIAH"
-                                table="matakuliah" />
+                            <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="DOSEN"
+                                table="dosen" />
                         </div>
 
                     </div>
@@ -63,7 +63,18 @@
                                 {{ dosen.rumpun_id }}
                             </td>
                             <td>
-                                {{ dosen.preferensi }}
+                                <div>
+                                    <span class="font-semibold">Hari: </span>
+                                    <span v-for="(hari, index) in dosen.preferensi.hari" :key="index">
+                                        {{ hari }}{{ index !== dosen.preferensi.hari.length - 1 ? ', ' : '' }}
+                                    </span>
+                                </div>
+                                <div>
+                                    <span class=" font-semibold">Sesi: </span>
+                                    <span v-for="(sesi, index) in dosen.preferensi.sesi" :key="index">
+                                        {{ sesi }}{{ index !== dosen.preferensi.sesi.length - 1 ? ', ' : '' }}
+                                    </span>
+                                </div>
                             </td>
 
 
@@ -106,8 +117,11 @@ const rumpunArr = Array.isArray(rumpun.value) ? rumpun.value : [];
 // console.log(rumpun.value);
 const rumpunOptions = rumpunArr.map(item => ({
     opt: item.nama,
-    val: item.ID
+    val: item.id
 }))
+
+console.log("Dosen data");
+console.log(dosenData);
 
 const formFormat = [
     {
@@ -123,7 +137,9 @@ const formFormat = [
     {
         'label': "Preferensi",
         'name': "preferensi",
-        'type': 'text'
+        'type': 'checkbox',
+        'hari': ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'],
+        'sesi': ['Pagi', 'Siang', 'Sore']
     },
     {
         'label': "Rumpun",
@@ -133,17 +149,51 @@ const formFormat = [
     },
 ]
 
+function processFormData(rawFormData) {
+    const processedFormData = { ...rawFormData };
+    const selectedDays = [];
+    const selectedSessions = [];
+
+    for (const key in processedFormData) {
+        if (processedFormData[key] === true && ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'].includes(key)) {
+            selectedDays.push(key);
+            delete processedFormData[key];
+        }
+
+        if (processedFormData[key] === true && ['Pagi', 'Siang', 'Sore', 'Malam'].includes(key)) {
+            selectedSessions.push(key);
+            delete processedFormData[key];
+        }
+    }
+
+    if (selectedDays.length > 0 || selectedSessions.length > 0) {
+        processedFormData.preferensi = {};
+
+        if (selectedDays.length > 0) {
+            processedFormData.preferensi.hari = selectedDays;
+        }
+
+        if (selectedSessions.length > 0) {
+            processedFormData.preferensi.sesi = selectedSessions;
+        }
+    }
+
+    return processedFormData;
+}
 
 const onSubmit = async (formData) => {
     console.log("INI FORM DATA DARI PAGE");
     console.log(formData);
+    const processedData = processFormData(formData)
+    console.log("Formated Data");
+    console.log(processedData);
     const { respons } = await useFetch("http://localhost:3000/api/dosen", {
         method: "POST",
         body: {
-            nama: formData.nama,
-            kode_dosen: formData.kode_dosen,
-            preferensi: formData.preferensi,
-            rumpun_id: formData.rumpun_id,
+            nama: processedData.nama,
+            kode_dosen: processedData.kode_dosen,
+            preferensi: processedData.preferensi,
+            rumpun_id: processedData.rumpun_id,
         },
         headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
     });
@@ -153,14 +203,17 @@ const onSubmit = async (formData) => {
 }
 
 const onSubmitEdit = async (formData) => {
-    var baseUrl = "http://localhost:3000/api/dosen/" + formData.ID
+    const processedData = processFormData(formData)
+    console.log("Formated Data");
+    console.log(processedData);
+    var baseUrl = "http://localhost:3000/api/dosen/" + processedData.id
     const { respons } = await useFetch(baseUrl, {
         method: "PUT",
         body: {
-            nama: formData.nama,
-            kode_dosen: formData.kode_dosen,
-            preferensi: formData.preferensi,
-            rumpun_id: formData.rumpun_id,
+            nama: processedData.nama,
+            kode_dosen: processedData.kode_dosen,
+            preferensi: processedData.preferensi,
+            rumpun_id: processedData.rumpun_id,
         },
         headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
     });

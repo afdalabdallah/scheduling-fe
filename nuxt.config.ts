@@ -37,6 +37,11 @@ export default defineNuxtConfig({
         to: "http://localhost:5000/dosen/**",
       }
     },
+    '/api/**':{
+      proxy: {
+        to: "http://localhost:5000/**"
+      }
+    }
 
   }
 })

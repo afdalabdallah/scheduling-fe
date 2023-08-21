@@ -65,7 +65,7 @@
                                 {{ matkul.sks }}
                             </td>
                             <td>
-                                {{ matkul.rumpun_id }}
+                                {{ matkul.rumpun }}
                             </td>
                             <td>
                                 {{ matkul.semester }}
@@ -144,7 +144,7 @@ const onSubmit = async (formData) => {
 }
 
 const onSubmitEdit = async (formData) => {
-    var baseUrl = "http://localhost:3000/api/matkul/" + formData.ID
+    var baseUrl = "http://localhost:3000/api/matkul/" + formData.id
     const { respons } = await useFetch(baseUrl, {
         method: "PUT",
         body: {
@@ -153,7 +153,7 @@ const onSubmitEdit = async (formData) => {
             tipe: formData.tipe,
             sks: formData.sks,
             semester: formData.semester,
-            rumpun_id: formData.rumpun_id,
+            rumpun_id: formData.rumpun,
         },
         headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
     });
@@ -172,7 +172,7 @@ const rumpunArr = Array.isArray(rumpun.value) ? rumpun.value : [];
 // console.log(rumpun.value);
 const rumpunOptions = rumpunArr.map(item => ({
     opt: item.nama,
-    val: item.ID
+    val: item.id
 }))
 
 
@@ -210,7 +210,7 @@ const formFormat = [
     },
     {
         'label': "Rumpun",
-        'name': "rumpun_id",
+        'name': "rumpun",
         'type': 'select',
         'options': rumpunOptions
     },
