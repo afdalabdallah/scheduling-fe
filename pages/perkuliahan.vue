@@ -166,4 +166,16 @@ const onSubmit = async (formData) => {
     console.log(respons);
     location.reload()
 }
+
+const deleteData = async (id) => {
+    var baseUrl = "http://localhost:5000/perkuliahan/" + id
+    console.log(baseUrl);
+    const { response } = await useFetch(baseUrl, {
+        method: "DELETE",
+    });
+    console.log(response);
+    location.reload()
+    console.log("Data deleted!");
+
+}
 </script>

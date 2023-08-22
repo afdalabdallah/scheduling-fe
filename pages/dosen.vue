@@ -44,7 +44,9 @@
                             <th>Kode Dosen</th>
                             <th>Nama</th>
                             <th>Rumpun</th>
+                            <th>Load</th>
                             <th>Preferensi</th>
+
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -61,6 +63,9 @@
                             </td>
                             <td>
                                 {{ dosen.rumpun_id }}
+                            </td>
+                            <td>
+                                {{ dosen.load }} SKS
                             </td>
                             <td>
                                 <div>
@@ -187,14 +192,11 @@ const onSubmit = async (formData) => {
     const processedData = processFormData(formData)
     console.log("Formated Data");
     console.log(processedData);
+    let dataArray = []
+    dataArray.push(processedData)
     const { respons } = await useFetch("http://localhost:3000/api/dosen", {
         method: "POST",
-        body: {
-            nama: processedData.nama,
-            kode_dosen: processedData.kode_dosen,
-            preferensi: processedData.preferensi,
-            rumpun_id: processedData.rumpun_id,
-        },
+        body: dataArray,
         headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
     });
     console.log("INI RESPONSE");
