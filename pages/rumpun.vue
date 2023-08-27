@@ -79,6 +79,7 @@ import { ref } from "vue";
 let rumpuns = reactive([])
 const fetchRumpun = async () => {
   const { data } = await useFetch("http://localhost:3000/api/rumpun");
+  console.log("MASOK KE CALL DEK");
   rumpuns = data
 }
 await fetchRumpun()
@@ -104,7 +105,7 @@ const formFormat = [
 
 const onSubmit = async (formData) => {
   console.log(formData);
-  const { respons } = await useFetch("http://localhost:3000/api/rumpun/post", {
+  const { respons } = await useFetch("http://localhost:5000/rumpun", {
     method: "POST",
     body: {
       nama: formData.nama,
