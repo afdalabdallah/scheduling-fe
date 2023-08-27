@@ -78,7 +78,7 @@ import { ref } from "vue";
 
 let rumpuns = reactive([])
 const fetchRumpun = async () => {
-  const { data } = await useFetch("http://localhost:3000/api/rumpun");
+  const { data } = await useFetch("http://127.0.0.1:5000/rumpun");
   console.log("MASOK KE CALL DEK");
   console.log(data);
   rumpuns = data
