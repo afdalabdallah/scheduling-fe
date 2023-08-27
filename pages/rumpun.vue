@@ -80,6 +80,7 @@ let rumpuns = reactive([])
 const fetchRumpun = async () => {
   const { data } = await useFetch("http://localhost:3000/api/rumpun");
   console.log("MASOK KE CALL DEK");
+  console.log(data);
   rumpuns = data
 }
 await fetchRumpun()
