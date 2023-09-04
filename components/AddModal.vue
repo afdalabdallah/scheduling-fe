@@ -1,12 +1,15 @@
 <template>
     <!-- The button to open modal -->
-    <label :for="table" class="hidden sm:block add-btn bg-[#0081C9] rounded-[5px] px-1 py-[4px]  text-white">+
-        Tambah
-    </label>
-    <label :for="table"
-        class="sm:hidden text-center block add-btn bg-[#0081C9] rounded-[5px] px-1 py-[4px] max-[499px]:w-full  text-white">
-        +
-    </label>
+    <div style="">
+        <label :for="table" class="hidden sm:block add-btn bg-[#0081C9] rounded-[5px] px-1 py-[4px]  text-white">+
+            Tambah
+        </label>
+        <label :for="table"
+            class="sm:hidden text-center block add-btn bg-[#0081C9] rounded-[5px] px-1 py-[4px] max-[499px]:w-full  text-white">
+            +
+        </label>
+    </div>
+
     <!-- Put this part before </body> tag -->
     <input type="checkbox" :id="table" class="modal-toggle" />
     <div class="modal">

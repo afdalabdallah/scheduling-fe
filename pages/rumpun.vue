@@ -74,28 +74,30 @@
 </template>
 
 <script setup>
-import { ref, nextTick } from "vue";
+import { ref, nextTick, reactive } from "vue";
 
-let rumpuns = reactive([])
-// const fetchRumpun = async () => {
-//   nextTick(async () => {
-//     const { data } = await useFetch("http://127.0.0.1:5000/rumpun");
-//     console.log("MASOK KE CALL DEK");
-//     console.log(data);
-//     rumpuns = data
-//   })
+let rumpuns = ref([])
+const fetchRumpun = async () => {
+  // nextTick(async () => {
 
-// }
-// await fetchRumpun()
+  // })
 
-onMounted(() => {
-  nextTick(async () => {
-    const { data } = await useFetch("http://127.0.0.1:3000/api/rumpun");
-    console.log("MASOK KE CALL DEK");
-    console.log(data);
-    rumpuns = data
-  })
-})
+  const { data } = await useFetch("http://localhost:3000/api/rumpun");
+  console.log("MASOK KE CALL DEK");
+  console.log(data.value);
+  rumpuns = data.value
+}
+await fetchRumpun()
+
+// nextTick(async () => {
+//   const { data } = await useFetch("http://127.0.0.1:3000/api/rumpun");
+//   console.log("MASOK KE CALL DEK");
+
+//   rumpuns = data.value
+//   console.log(rumpuns);
+// })
+
+
 
 const formData = ref({
   nama: "",

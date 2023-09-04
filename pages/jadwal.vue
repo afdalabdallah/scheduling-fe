@@ -27,108 +27,73 @@
                         <tr>
                             <td>Senin</td>
                             <td>
-                                <div>07.00 - 08.00</div>
-                                <div>08.00 - 09.00</div>
-                                <div>09.00 - 10.00</div>
-                                <div>10.00 - 11.00</div>
-                                <div>12.00 - 13.00</div>
-                                <div>13.00 - 14.00</div>
-                                <div>14.00 - 15.00</div>
-                                <div>16.00 - 17.00</div>
-                                <div>17.00 - 18.00</div>
+                                <div>Sesi 1</div>
+                                <div>Sesi 2</div>
+                                <div>Sesi 3</div>
+                                <div>Sesi 4</div>
+                                <div>Sesi 5</div>
+                            </td>
+                            <td v-for="data in mockData">
+                                <div v-if="data.ruangan == 101">{{ data.sesi }}</div>
+                                <div v-else>&nbsp;</div>
+                            </td>
+                            <td>
+                                <div>a</div>
+                                <div>a</div>
+                                <div>a</div>
+                                <div>&nbsp;</div>
+                                <div>&nbsp;</div>
+                            </td>
+                            <td>
+                                <div>a</div>
+                                <div>a</div>
+                                <div>&nbsp;</div>
+                                <div>a</div>
+                                <div>&nbsp;</div>
+
                             </td>
                         </tr>
                         <tr>
                             <td>Selasa</td>
                             <td>
-                                <div>07.00 - 08.00</div>
-                                <div>08.00 - 09.00</div>
-                                <div>09.00 - 10.00</div>
-                                <div>10.00 - 11.00</div>
-                                <div>12.00 - 13.00</div>
-                                <div>13.00 - 14.00</div>
-                                <div>14.00 - 15.00</div>
-                                <div>16.00 - 17.00</div>
-                                <div>17.00 - 18.00</div>
+                                <div>Sesi 1</div>
+                                <div>Sesi 2</div>
+                                <div>Sesi 3</div>
+                                <div>Sesi 4</div>
+                                <div>Sesi 5</div>
                             </td>
                         </tr>
                         <tr>
                             <td>Rabu</td>
                             <td>
-                                <div>07.00 - 08.00</div>
-                                <div>08.00 - 09.00</div>
-                                <div>09.00 - 10.00</div>
-                                <div>10.00 - 11.00</div>
-                                <div>12.00 - 13.00</div>
-                                <div>13.00 - 14.00</div>
-                                <div>14.00 - 15.00</div>
-                                <div>16.00 - 17.00</div>
-                                <div>17.00 - 18.00</div>
+                                <div>Sesi 1</div>
+                                <div>Sesi 2</div>
+                                <div>Sesi 3</div>
+                                <div>Sesi 4</div>
+                                <div>Sesi 4</div>
                             </td>
                         </tr>
                         <tr>
                             <td>Kamis</td>
                             <td>
-                                <div>07.00 - 08.00</div>
-                                <div>08.00 - 09.00</div>
-                                <div>09.00 - 10.00</div>
-                                <div>10.00 - 11.00</div>
-                                <div>12.00 - 13.00</div>
-                                <div>13.00 - 14.00</div>
-                                <div>14.00 - 15.00</div>
-                                <div>16.00 - 17.00</div>
-                                <div>17.00 - 18.00</div>
+                                <div>Sesi 1</div>
+                                <div>Sesi 2</div>
+                                <div>Sesi 3</div>
+                                <div>Sesi 4</div>
+                                <div>Sesi 5</div>
                             </td>
                         </tr>
                         <tr>
                             <td>Jumat</td>
                             <td>
-                                <div>07.00 - 08.00</div>
-                                <div>08.00 - 09.00</div>
-                                <div>09.00 - 10.00</div>
-                                <div>10.00 - 11.00</div>
-                                <div>12.00 - 13.00</div>
-                                <div>13.00 - 14.00</div>
-                                <div>14.00 - 15.00</div>
-                                <div>16.00 - 17.00</div>
-                                <div>17.00 - 18.00</div>
+                                <div>Sesi 1</div>
+                                <div>Sesi 2</div>
+                                <div>Sesi 3</div>
+                                <div>Sesi 4</div>
+                                <div>Sesi 5</div>
                             </td>
                         </tr>
-                        <tr v-for="(perkuliahan, index) in perkuliahanData">
-                            <th>
-                                {{ index + 1 }}
-                            </th>
-                            <td>
-                                {{ perkuliahan.kode_mk }}
-                            </td>
-                            <td>
-                                {{ perkuliahan.nama_mk }}
-                            </td>
-                            <td>
-                                {{ perkuliahan.semester }}
-                            </td>
-                            <td>
-                                {{ perkuliahan.rumpun }}
-                            </td>
-                            <td>
-                                {{ perkuliahan.kode_dosen }}
-                            </td>
-                            <td>
-                                {{ perkuliahan.ruangan }}
-                            </td>
-                            <td>
-                                {{ perkuliahan.sesi }}
-                            </td>
-                            <td>
-                                <div class="flex gap-2">
-                                    <EditModal @formSubmitted="onSubmitEdit" v-bind:index="index" v-bind:datas="perkuliahan"
-                                        v-bind:form-format="formFormat" table="Perkuliahan" />
-                                    <DeleteModal @dataDeleted="deleteData" v-bind:data="perkuliahan"
-                                        v-bind:first="perkuliahan.kode_mk" v-bind:second="perkuliahan.nama_mk"
-                                        table="Perkuliahan" />
-                                </div>
-                            </td>
-                        </tr>
+
 
                     </tbody>
                 </table>
@@ -137,3 +102,107 @@
         </div>
     </div>
 </template>
+
+<script setup>
+let mockData = [
+    {
+        "dosen": "SD",
+        "mata_kuliah": "IF4201",
+        "kelas": "A",
+        "ruangan": "101",
+        "sesi": "305",
+        "preferensi": ["Pagi", "Siang"],
+        "tipe": "jurusan",
+        "rmk": "AJK",
+    },
+    {
+        "dosen": "SD",
+        "mata_kuliah": "IF4201",
+        "kelas": "A",
+        "ruangan": "101",
+        "sesi": "105",
+        "preferensi": ["Pagi", "Siang"],
+        "tipe": "jurusan",
+        "rmk": "AJK",
+    },
+    {
+        "dosen": "SD",
+        "mata_kuliah": "IF4201",
+        "kelas": "A",
+        "ruangan": "101",
+        "sesi": "102",
+        "preferensi": ["Pagi", "Siang"],
+        "tipe": "jurusan",
+        "rmk": "AJK",
+    },
+    {
+        "dosen": "SD",
+        "mata_kuliah": "IF4201",
+        "kelas": "A",
+        "ruangan": "102",
+        "sesi": "105",
+        "preferensi": ["Pagi", "Siang"],
+        "tipe": "jurusan",
+        "rmk": "AJK",
+    }
+]
+
+let processedData = {}
+
+const dayDict = {
+    "1": "Senin",
+    "2": "Selasa",
+    "3": "Rabu",
+    "4": "Kamis",
+    "5": "Jumat"
+}
+
+const listRuangan = [ //this will be fetched from API later
+    "101",
+    "102",
+    "103",
+    "104",
+    "105",
+    "501",
+    "106",
+    "107",
+    "108",
+    "111",
+    "112"
+]
+
+listRuangan.forEach((data) => {
+    if (!processedData[data]) {
+        processedData[data] = {}
+    }
+
+    for (const key in dayDict) {
+        if (!processedData[data][dayDict[key]]) {
+            processedData[data][dayDict[key]] = []
+        }
+    }
+})
+
+
+
+mockData.sort((a, b) => {
+    const sesiA = parseInt(a.sesi)
+    const sesiB = parseInt(b.sesi)
+    return sesiA - sesiB
+})
+
+console.log(mockData);
+
+mockData.forEach((data) => {
+    const ruanganKey = data.ruangan
+    const dayKey = data.sesi.charAt(0).toLocaleLowerCase();
+    const dayKeyStr = dayDict[dayKey]
+
+    processedData[ruanganKey][dayKeyStr].push(data)
+})
+
+
+
+// const sortedData = sortDataBySesi(processedData)
+console.log(processedData);
+</script>
