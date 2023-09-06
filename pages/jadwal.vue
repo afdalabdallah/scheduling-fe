@@ -24,8 +24,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Senin</td>
+                        <tr v-for="(value, key) in processedData" :key="key">
+                            <td>
+                                {{ key }}
+                            </td>
                             <td>
                                 <div>Sesi 1</div>
                                 <div>Sesi 2</div>
@@ -33,66 +35,22 @@
                                 <div>Sesi 4</div>
                                 <div>Sesi 5</div>
                             </td>
-                            <td v-for="data in mockData">
-                                <div v-if="data.ruangan == 101">{{ data.sesi }}</div>
-                                <div v-else>&nbsp;</div>
+                            <td v-for="(data, dataKey) in value">
+                                <div v-if="data.length">
+                                    <div v-for="sesi in ['1', '2', '3', '4', '5']">
+                                        <div v-for="(matkul) in data">
+                                            <div v-if="matkul.sesi[2] == sesi">
+                                                a
+                                            </div>
+                                            <div v-else>bo</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div v-else>&nbsp;</div> -->
                             </td>
-                            <td>
-                                <div>a</div>
-                                <div>a</div>
-                                <div>a</div>
-                                <div>&nbsp;</div>
-                                <div>&nbsp;</div>
-                            </td>
-                            <td>
-                                <div>a</div>
-                                <div>a</div>
-                                <div>&nbsp;</div>
-                                <div>a</div>
-                                <div>&nbsp;</div>
 
-                            </td>
                         </tr>
-                        <tr>
-                            <td>Selasa</td>
-                            <td>
-                                <div>Sesi 1</div>
-                                <div>Sesi 2</div>
-                                <div>Sesi 3</div>
-                                <div>Sesi 4</div>
-                                <div>Sesi 5</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Rabu</td>
-                            <td>
-                                <div>Sesi 1</div>
-                                <div>Sesi 2</div>
-                                <div>Sesi 3</div>
-                                <div>Sesi 4</div>
-                                <div>Sesi 4</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Kamis</td>
-                            <td>
-                                <div>Sesi 1</div>
-                                <div>Sesi 2</div>
-                                <div>Sesi 3</div>
-                                <div>Sesi 4</div>
-                                <div>Sesi 5</div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Jumat</td>
-                            <td>
-                                <div>Sesi 1</div>
-                                <div>Sesi 2</div>
-                                <div>Sesi 3</div>
-                                <div>Sesi 4</div>
-                                <div>Sesi 5</div>
-                            </td>
-                        </tr>
+
 
 
                     </tbody>
@@ -107,7 +65,7 @@
 let mockData = [
     {
         "dosen": "SD",
-        "mata_kuliah": "IF4201",
+        "mata_kuliah": "IF4202",
         "kelas": "A",
         "ruangan": "101",
         "sesi": "305",
@@ -117,7 +75,7 @@ let mockData = [
     },
     {
         "dosen": "SD",
-        "mata_kuliah": "IF4201",
+        "mata_kuliah": "IF4203",
         "kelas": "A",
         "ruangan": "101",
         "sesi": "105",
@@ -127,7 +85,7 @@ let mockData = [
     },
     {
         "dosen": "SD",
-        "mata_kuliah": "IF4201",
+        "mata_kuliah": "IF4204",
         "kelas": "A",
         "ruangan": "101",
         "sesi": "102",
@@ -137,7 +95,7 @@ let mockData = [
     },
     {
         "dosen": "SD",
-        "mata_kuliah": "IF4201",
+        "mata_kuliah": "IF4205",
         "kelas": "A",
         "ruangan": "102",
         "sesi": "105",
@@ -157,6 +115,10 @@ const dayDict = {
     "5": "Jumat"
 }
 
+const listHari = [
+    "Senin", "Selasa", "Rabu", "Kamis", "Jumat"
+]
+
 const listRuangan = [ //this will be fetched from API later
     "101",
     "102",
@@ -171,16 +133,16 @@ const listRuangan = [ //this will be fetched from API later
     "112"
 ]
 
-listRuangan.forEach((data) => {
+listHari.forEach((data) => {
     if (!processedData[data]) {
         processedData[data] = {}
     }
 
-    for (const key in dayDict) {
-        if (!processedData[data][dayDict[key]]) {
-            processedData[data][dayDict[key]] = []
+    listRuangan.forEach((ruangan) => {
+        if (!processedData[data][ruangan]) {
+            processedData[data][ruangan] = []
         }
-    }
+    })
 })
 
 
@@ -198,7 +160,7 @@ mockData.forEach((data) => {
     const dayKey = data.sesi.charAt(0).toLocaleLowerCase();
     const dayKeyStr = dayDict[dayKey]
 
-    processedData[ruanganKey][dayKeyStr].push(data)
+    processedData[dayKeyStr][ruanganKey].push(data)
 })
 
 
