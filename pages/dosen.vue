@@ -128,6 +128,8 @@ const rumpunOptions = rumpunArr.map(item => ({
 console.log("Dosen data");
 console.log(dosenData);
 
+const sesi = ['Sesi 1', 'Sesi 2', 'Sesi 3', 'Sesi 4', 'Sesi 5', 'Sesi 6', 'Sesi 7', 'Sesi 8', 'Sesi 9', 'Sesi 10']
+const hari =  ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat']
 const formFormat = [
     {
         'label': "Nama Dosen",
@@ -143,8 +145,8 @@ const formFormat = [
         'label': "Preferensi",
         'name': "preferensi",
         'type': 'checkbox',
-        'hari': ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'],
-        'sesi': ['Pagi', 'Siang', 'Sore']
+        'hari': hari,
+        'sesi': sesi,
     },
     {
         'label': "Rumpun",
@@ -154,18 +156,20 @@ const formFormat = [
     },
 ]
 
+
+
 function processFormData(rawFormData) {
     const processedFormData = { ...rawFormData };
     const selectedDays = [];
     const selectedSessions = [];
 
     for (const key in processedFormData) {
-        if (processedFormData[key] === true && ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'].includes(key)) {
+        if (processedFormData[key] === true && hari.includes(key)) {
             selectedDays.push(key);
             delete processedFormData[key];
         }
 
-        if (processedFormData[key] === true && ['Pagi', 'Siang', 'Sore', 'Malam'].includes(key)) {
+        if (processedFormData[key] === true && sesi.includes(key)) {
             selectedSessions.push(key);
             delete processedFormData[key];
         }

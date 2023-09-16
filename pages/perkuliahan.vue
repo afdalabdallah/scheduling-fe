@@ -28,7 +28,7 @@
                         </form>
                         <div class="">
                             <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="PERKULIAHAN"
-                                table="perkuliahan" />
+                                table="perkuliahan" v-bind:dosen-data="dosenData" v-bind:matkul-data="mataKuliah" />
                         </div>
 
                     </div>
@@ -43,6 +43,7 @@
                             <th></th>
                             <th>Kode MK</th>
                             <th>MK</th>
+                            <th>Kelas</th>
                             <th>Semester</th>
                             <th>Rumpun</th>
                             <th>Kode Dosen</th>
@@ -63,6 +64,9 @@
                                 {{ perkuliahan.nama_mk }}
                             </td>
                             <td>
+                                {{ perkuliahan.kelas }}
+                            </td>
+                            <td>
                                 {{ perkuliahan.semester }}
                             </td>
                             <td>
@@ -79,11 +83,11 @@
                             </td>
                             <td>
                                 <div class="flex gap-2">
-                                    <EditModal @formSubmitted="onSubmitEdit" v-bind:index="index" v-bind:datas="perkuliahan"
-                                        v-bind:form-format="formFormat" table="Perkuliahan" />
+                                    <EditModal @formSubmitted="onSubmitEdit" v-bind:index="perkuliahan.kode_mk + perkuliahan.kelas" v-bind:datas="perkuliahan"
+                                        v-bind:form-format="formFormat" table="perkuliahan" />
                                     <DeleteModal @dataDeleted="deleteData" v-bind:data="perkuliahan"
                                         v-bind:first="perkuliahan.kode_mk" v-bind:second="perkuliahan.nama_mk"
-                                        table="Perkuliahan" />
+                                        table="perkuliahan" />
                                 </div>
                             </td>
                         </tr>
@@ -125,14 +129,14 @@ const dosenArr = Array.isArray(dosenData.value) ? dosenData.value : [];
 // console.log(rumpun.value);
 const dosenOptions = dosenArr.map(item => ({
     opt: item.nama,
-    val: item.id
+    val: item.id,
 }))
 
 const matkulArr = Array.isArray(mataKuliah.value) ? mataKuliah.value : [];
 // console.log(rumpun.value);
 const matkulOptions = matkulArr.map(item => ({
     opt: item.nama,
-    val: item.id
+    val: item.id,
 }))
 
 const formFormat = [
@@ -148,6 +152,11 @@ const formFormat = [
         'type': 'select',
         'options': dosenOptions
     },
+    {
+        'label': "Kelas",
+        'name': "kelas",
+        'type': 'text'
+    }
 
 ]
 
@@ -158,6 +167,22 @@ const onSubmit = async (formData) => {
         method: "POST",
         body: {
             dosen_id: formData.dosen_id,
+            kelas: formData.kelas,
+            mata_kuliah_id: formData.mata_kuliah_id
+        },
+        headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
+    });
+    console.log("INI RESPONSE");
+    console.log(respons);
+    location.reload()
+}
+
+const onSubmitEdit = async(formData) => {
+    const { respons } = await useFetch("http://localhost:3000/api/perkuliahan" + formData.id, {
+        method: "PUT",
+        body: {
+            dosen_id: formData.dosen_id,
+            kelas: formData.kelas,
             mata_kuliah_id: formData.mata_kuliah_id
         },
         headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }

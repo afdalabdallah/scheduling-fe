@@ -4,49 +4,51 @@
         <div class="bg-white rounded-lg">
 
             <div class=" overflow-x-auto">
-                <table class="table table-sm">
-                    <!-- head -->
-                    <thead class="bg-[#E9F4FF] border-none text-black">
+                <div class="flex gap-2 justify-between pl-4 pr-4">
+                    <div>Hari</div>
+                    <div>Jam</div>
+                    <div v-for="ruangan in listRuangan">
+                        {{ ruangan }}
+                    </div>
+                </div>
+                <div class="grid">
+                  
+                </div>
+                <!-- <table class="table table-sm table-fixed">
+                    <thead class="bg-[#E9F4FF] text-black">
                         <tr>
                             <th>Hari</th>
                             <th>Jam</th>
-                            <th>101</th>
-                            <th>102</th>
-                            <th>103</th>
-                            <th>104</th>
-                            <th>105B</th>
-                            <th>105A</th>
-                            <th>106</th>
-                            <th>107</th>
-                            <th>108</th>
-                            <th>111</th>
-                            <th>112</th>
+                            <th v-for="ruangan in listRuangan">
+                                <div v-if="ruangan == 501">
+                                    105B
+                                </div>
+                                <div v-else>{{ ruangan }}</div>
+                                
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="(value, key) in processedData" :key="key">
-                            <td>
-                                {{ key }}
+                        <tr v-for="(hari, keyHari) in processedData" :key="key">
+                            <td class="border border-slate-400">
+                                {{ keyHari }}
                             </td>
                             <td>
-                                <div>Sesi 1</div>
-                                <div>Sesi 2</div>
-                                <div>Sesi 3</div>
-                                <div>Sesi 4</div>
-                                <div>Sesi 5</div>
-                            </td>
-                            <td v-for="(data, dataKey) in value">
-                                <div v-if="data.length">
-                                    <div v-for="sesi in ['1', '2', '3', '4', '5']">
-                                        <div v-for="(matkul) in data">
-                                            <div v-if="matkul.sesi[2] == sesi">
-                                                a
-                                            </div>
-                                            <div v-else>bo</div>
-                                        </div>
-                                    </div>
+                                <div v-for="sesi in listSesi">
+                                    Sesi {{ sesi }}
                                 </div>
-                                <!-- <div v-else>&nbsp;</div> -->
+                                    
+                               
+                            </td>
+                            <td v-for="(dataRuangan, keyRuangan) in hari" >
+                                <div v-for="(sesi, keySesi) in dataRuangan" >
+                                    <div v-if="sesiNotEmpty(sesi)" class="">
+                                        {{ sesi.mata_kuliah }}
+                                        {{ sesi.dosen }}
+                                    </div>
+                                    <div v-else>&nbsp; </div>
+                                </div>
+                                
                             </td>
 
                         </tr>
@@ -54,7 +56,7 @@
 
 
                     </tbody>
-                </table>
+                </table> -->
             </div>
 
         </div>
@@ -62,48 +64,17 @@
 </template>
 
 <script setup>
-let mockData = [
-    {
-        "dosen": "SD",
-        "mata_kuliah": "IF4202",
-        "kelas": "A",
-        "ruangan": "101",
-        "sesi": "305",
-        "preferensi": ["Pagi", "Siang"],
-        "tipe": "jurusan",
-        "rmk": "AJK",
-    },
-    {
-        "dosen": "SD",
-        "mata_kuliah": "IF4203",
-        "kelas": "A",
-        "ruangan": "101",
-        "sesi": "105",
-        "preferensi": ["Pagi", "Siang"],
-        "tipe": "jurusan",
-        "rmk": "AJK",
-    },
-    {
-        "dosen": "SD",
-        "mata_kuliah": "IF4204",
-        "kelas": "A",
-        "ruangan": "101",
-        "sesi": "102",
-        "preferensi": ["Pagi", "Siang"],
-        "tipe": "jurusan",
-        "rmk": "AJK",
-    },
-    {
-        "dosen": "SD",
-        "mata_kuliah": "IF4205",
-        "kelas": "A",
-        "ruangan": "102",
-        "sesi": "105",
-        "preferensi": ["Pagi", "Siang"],
-        "tipe": "jurusan",
-        "rmk": "AJK",
-    }
-]
+import { list } from 'postcss';
+
+let mockData = reactive([])
+const fetchMock = async () => {
+    const { data } = await useFetch("http://localhost:3000/api/api.json");
+    mockData = data.value.data
+}
+
+await fetchMock()
+
+
 
 let processedData = {}
 
@@ -119,6 +90,10 @@ const listHari = [
     "Senin", "Selasa", "Rabu", "Kamis", "Jumat"
 ]
 
+function sesiNotEmpty (obj){
+    return Object.keys(obj).length > 0;
+}
+
 const listRuangan = [ //this will be fetched from API later
     "101",
     "102",
@@ -133,6 +108,10 @@ const listRuangan = [ //this will be fetched from API later
     "112"
 ]
 
+const listSesi = [ //this will be fetched later from API
+    "1","2","3","4","5","6","7","8","9","10"
+]
+
 listHari.forEach((data) => {
     if (!processedData[data]) {
         processedData[data] = {}
@@ -140,9 +119,14 @@ listHari.forEach((data) => {
 
     listRuangan.forEach((ruangan) => {
         if (!processedData[data][ruangan]) {
-            processedData[data][ruangan] = []
+            processedData[data][ruangan] = {}
         }
+        listSesi.forEach((sesi) => {
+            processedData[data][ruangan][sesi] = {}
+        })
     })
+
+    
 })
 
 
@@ -153,18 +137,16 @@ mockData.sort((a, b) => {
     return sesiA - sesiB
 })
 
-console.log(mockData);
-
+console.log(processedData);
+console.log(mockData)
 mockData.forEach((data) => {
     const ruanganKey = data.ruangan
     const dayKey = data.sesi.charAt(0).toLocaleLowerCase();
     const dayKeyStr = dayDict[dayKey]
-
-    processedData[dayKeyStr][ruanganKey].push(data)
+    processedData[dayKeyStr][ruanganKey][data.sesi[2]] = data
 })
 
 
-
-// const sortedData = sortDataBySesi(processedData)
-console.log(processedData);
+// // const sortedData = sortDataBySesi(processedData)
+// console.log(processedData);
 </script>

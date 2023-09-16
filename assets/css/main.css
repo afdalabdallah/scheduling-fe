@@ -80,3 +80,7 @@ td {
   border-collapse: collapse;
   border-style: solid none;
 }
+
+label {
+  font-weight: bold;
+}

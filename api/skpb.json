@@ -1,0 +1,174 @@
+{
+  "data": [
+    {
+      "dosen": "SF",
+      "mata_kuliah": "SK9999",
+      "kelas": "A",
+      "ruangan": "999",
+      "sesi": "101",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SF",
+      "mata_kuliah": "SK9999",
+      "kelas": "B",
+      "ruangan": "999",
+      "sesi": "103",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SW",
+      "mata_kuliah": "SK9998",
+      "kelas": "A",
+      "ruangan": "998",
+      "sesi": "107",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SI",
+      "mata_kuliah": "SK9997",
+      "kelas": "A",
+      "ruangan": "997",
+      "sesi": "201",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SM",
+      "mata_kuliah": "SK9996",
+      "kelas": "A",
+      "ruangan": "996",
+      "sesi": "203",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SS",
+      "mata_kuliah": "SK9995",
+      "kelas": "A",
+      "ruangan": "999",
+      "sesi": "207",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SM",
+      "mata_kuliah": "SK9996",
+      "kelas": "B",
+      "ruangan": "996",
+      "sesi": "209",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SK",
+      "mata_kuliah": "SK9994",
+      "kelas": "A",
+      "ruangan": "994",
+      "sesi": "209",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SF",
+      "mata_kuliah": "SK9999",
+      "kelas": "C",
+      "ruangan": "999",
+      "sesi": "301",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SF",
+      "mata_kuliah": "SK9999",
+      "kelas": "D",
+      "ruangan": "999",
+      "sesi": "303",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SW",
+      "mata_kuliah": "SK9998",
+      "kelas": "B",
+      "ruangan": "998",
+      "sesi": "305",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SS",
+      "mata_kuliah": "SK9995",
+      "kelas": "B",
+      "ruangan": "995",
+      "sesi": "307",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SM",
+      "mata_kuliah": "SK9996",
+      "kelas": "C",
+      "ruangan": "996",
+      "sesi": "403",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SK",
+      "mata_kuliah": "SK9994",
+      "kelas": "B",
+      "ruangan": "994",
+      "sesi": "405",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SI",
+      "mata_kuliah": "SK9997",
+      "kelas": "B",
+      "ruangan": "997",
+      "sesi": "501",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SN",
+      "mata_kuliah": "SK9993",
+      "kelas": "A",
+      "ruangan": "993",
+      "sesi": "503",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    },
+    {
+      "dosen": "SN",
+      "mata_kuliah": "SK9993",
+      "kelas": "B",
+      "ruangan": "993",
+      "sesi": "504",
+      "preferensi": [],
+      "tipe": "SK",
+      "rmk": "SKPB"
+    }
+  ]
+}

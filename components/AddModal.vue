@@ -25,33 +25,56 @@
                         <label>{{ data.label }}</label><br>
                         <input class="w-full p-2 rounded-md border" v-if="data.type === 'text'" type="text"
                             :placeholder="data.label" v-model="formData[data.name]" :name="data.name" required />
-                        <input class="w-full p-2 rounded-md border" v-else-if="data.type === 'number'" type="number"
+                        <input class="w-full p-2 rounded-md border" v-if="data.type === 'number'" type="number"
                             :placeholder="data.label" v-model="formData[data.name]" :name="data.name" required />
                         <select required class="w-full p-2 rounded-md border" v-model="formData[data.name]"
-                            v-else-if="data.type === 'select'">
+                            v-if="data.type === 'select'">
                             <option v-for="option in data.options" :value="option.val">{{ option.opt }}
                             </option>
-
                         </select>
-                        <div v-else-if="data.type === 'checkbox'" class="flex gap-5">
+                        <div v-if="table == 'perkuliahan'">
+                            <div v-if="data.name == 'mata_kuliah_id'">
+                                <div v-for="matkul in matkulData">
+                                    <div v-if="matkul.id == formData[data.name]">
+                                        <p>Nama: {{ matkul.nama }} </p>
+                                        <p>Load: {{ matkul.sks }} SKS</p>
+                                        <p>Rumpun: {{ matkul.rumpun }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-else-if="data.name == 'dosen_id'">
+                                <div v-for="dosen in dosenData">
+                                    <div v-if="dosen.id == formData[data.name]">
+                                        <p>Nama: {{ dosen.nama }} </p>
+                                        <p>Load: {{ dosen.load }} SKS</p>
+                                        <p>Rumpun: {{ dosen.rumpun_id }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div v-if="data.type === 'checkbox'" class="flex gap-5">
                             <div>
                                 Hari
                                 <div v-for="(day, index) in data.hari" :key="index">
                                     <div class="flex gap-1">
                                         <input :id="`day-${index}`" type="checkbox" v-model="formData[day]" :value="day" />
-                                        <label :for="`day-${index}`">{{ day }}</label>
+                                        <label :for="`day-${index}`" class="font-normal">{{ day }}</label>
                                     </div>
                                 </div>
                             </div>
-                            <div>
+                            <div >
                                 Sesi
-                                <div v-for="(sesi, index) in data.sesi" :key="index">
-                                    <div class="flex gap-1">
-                                        <input :id="`sesi-${index}`" type="checkbox" v-model="formData[sesi]"
-                                            :value="sesi" />
-                                        <label :for="`sesi-${index}`">{{ sesi }}</label>
+                                <div class="gap-1 grid grid-cols-2" >
+                                     <div v-for="(sesi, index) in data.sesi" :key="index" >
+                                            <div class="flex gap-1">
+                                                <input :id="`sesi-${index}`" type="checkbox" v-model="formData[sesi]"
+                                                    :value="sesi" class="" />
+                                                <label :for="`sesi-${index}`" class="font-normal">{{ sesi }}</label>
+                                            </div>
                                     </div>
                                 </div>
+                               
                             </div>
                         </div>
                     </div>
@@ -84,6 +107,8 @@ const props = defineProps(
         'table',
         'formFormat',
         'formTitle',
+        'dosenData',
+        'matkulData'
     ]
 )
 
