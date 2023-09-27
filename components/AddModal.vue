@@ -51,9 +51,9 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
-                        <div v-if="data.type === 'checkbox'" class="flex gap-5">
+                        <div v-if="(data.type === 'checkbox' && table == 'dosen')" class="flex gap-5">
                             <div>
                                 Hari
                                 <div v-for="(day, index) in data.hari" :key="index">
@@ -63,18 +63,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div >
+                            <div>
                                 Sesi
-                                <div class="gap-1 grid grid-cols-2" >
-                                     <div v-for="(sesi, index) in data.sesi" :key="index" >
-                                            <div class="flex gap-1">
-                                                <input :id="`sesi-${index}`" type="checkbox" v-model="formData[sesi]"
-                                                    :value="sesi" class="" />
-                                                <label :for="`sesi-${index}`" class="font-normal">{{ sesi }}</label>
-                                            </div>
+                                <div class="gap-1 grid grid-cols-2">
+                                    <div v-for="(sesi, index) in data.sesi" :key="index">
+                                        <div class="flex gap-1">
+                                            <input :id="`sesi-${index}`" type="checkbox" v-model="formData[sesi]"
+                                                :value="sesi" class="" />
+                                            <label :for="`sesi-${index}`" class="font-normal">{{ sesi }}</label>
+                                        </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>

@@ -83,7 +83,8 @@
                             </td>
                             <td>
                                 <div class="flex gap-2">
-                                    <EditModal @formSubmitted="onSubmitEdit" v-bind:index="perkuliahan.kode_mk + perkuliahan.kelas" v-bind:datas="perkuliahan"
+                                    <EditModal @formSubmitted="onSubmitEdit"
+                                        v-bind:index="perkuliahan.kode_mk + perkuliahan.kelas" v-bind:datas="perkuliahan"
                                         v-bind:form-format="formFormat" table="perkuliahan" />
                                     <DeleteModal @dataDeleted="deleteData" v-bind:data="perkuliahan"
                                         v-bind:first="perkuliahan.kode_mk" v-bind:second="perkuliahan.nama_mk"
@@ -101,6 +102,7 @@
 </template>
 
 <script setup>
+
 let perkuliahanData = reactive([])
 const fetchPerkuliahan = async () => {
     const { data } = await useFetch("http://localhost:3000/api/perkuliahan");
@@ -139,6 +141,11 @@ const matkulOptions = matkulArr.map(item => ({
     val: item.id,
 }))
 
+
+// Will be fetched by api later
+const sesi = ['Sesi 1', 'Sesi 2', 'Sesi 3', 'Sesi 4', 'Sesi 5', 'Sesi 6', 'Sesi 7', 'Sesi 8', 'Sesi 9', 'Sesi 10']
+const hari = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat']
+
 const formFormat = [
     {
         'label': "Mata Kuliah",
@@ -156,7 +163,14 @@ const formFormat = [
         'label': "Kelas",
         'name': "kelas",
         'type': 'text'
-    }
+    },
+    // {
+    //     'label': "Sesi",
+    //     'name': "sesi",
+    //     'type': 'checkbox',
+    //     'hari': hari,
+    //     'sesi': sesi,
+    // },
 
 ]
 
@@ -173,22 +187,7 @@ const onSubmit = async (formData) => {
         headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
     });
     console.log("INI RESPONSE");
-    console.log(respons);
-    // location.reload()
-}
-
-const onSubmitEdit = async(formData) => {
-    const { respons } = await useFetch("http://localhost:3000/api/perkuliahan" + formData.id, {
-        method: "PUT",
-        body: {
-            dosen_id: formData.dosen_id,
-            kelas: formData.kelas,
-            mata_kuliah_id: formData.mata_kuliah_id
-        },
-        headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
-    });
-    console.log("INI RESPONSE");
-    console.log(respons);
+    // console.log(respons);
     location.reload()
 }
 
@@ -203,4 +202,26 @@ const deleteData = async (id) => {
     console.log("Data deleted!");
 
 }
+
+export const onSubmitEdit = async (formData) => {
+    const { respons } = await useFetch(
+        "http://localhost:3000/api/perkuliahan" + formData.id,
+        {
+            method: "PUT",
+            body: {
+                dosen_id: formData.dosen_id,
+                kelas: formData.kelas,
+                mata_kuliah_id: formData.mata_kuliah_id,
+            },
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "*",
+            },
+        }
+    );
+    console.log("INI RESPONSE");
+    console.log(respons);
+    location.reload();
+};
+
 </script>
