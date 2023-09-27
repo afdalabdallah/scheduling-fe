@@ -174,7 +174,7 @@ const onSubmit = async (formData) => {
     });
     console.log("INI RESPONSE");
     console.log(respons);
-    location.reload()
+    // location.reload()
 }
 
 const onSubmitEdit = async(formData) => {

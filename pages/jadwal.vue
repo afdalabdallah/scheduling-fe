@@ -4,7 +4,7 @@
         <div class="bg-white rounded-lg">
 
             <div class=" overflow-x-auto">
-                <div class="flex gap-2 justify-between pl-4 pr-4">
+                <!-- <div class="flex gap-2 justify-between pl-4 pr-4">
                     <div>Hari</div>
                     <div>Jam</div>
                     <div v-for="ruangan in listRuangan">
@@ -13,8 +13,8 @@
                 </div>
                 <div class="grid">
                   
-                </div>
-                <!-- <table class="table table-sm table-fixed">
+                </div> -->
+                <table class="table table-sm table-fixed">
                     <thead class="bg-[#E9F4FF] text-black">
                         <tr>
                             <th>Hari</th>
@@ -56,7 +56,7 @@
 
 
                     </tbody>
-                </table> -->
+                </table>
             </div>
 
         </div>

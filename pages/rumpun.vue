@@ -143,7 +143,8 @@ const deleteData = async (id) => {
 }
 
 const onSubmitEdit = async (formData) => {
-  var baseUrl = "http://localhost:3000/api/rumpun/" + formData.ID
+  var baseUrl = "http://localhost:3000/api/rumpun/" + formData.id
+  console.log(baseUrl)
   const { respons } = await useFetch(baseUrl, {
     method: "PUT",
     body: {
