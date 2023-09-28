@@ -107,9 +107,11 @@ let perkuliahanData = reactive([])
 const fetchPerkuliahan = async () => {
     const { data } = await useFetch("http://localhost:3000/api/perkuliahan");
     perkuliahanData = data
+    console.log(perkuliahanData);
 }
 
 await fetchPerkuliahan()
+
 
 let mataKuliah = reactive([])
 const fetchMataKuliah = async () => {
@@ -203,7 +205,7 @@ const deleteData = async (id) => {
 
 }
 
-export const onSubmitEdit = async (formData) => {
+const onSubmitEdit = async (formData) => {
     const { respons } = await useFetch(
         "http://localhost:3000/api/perkuliahan" + formData.id,
         {

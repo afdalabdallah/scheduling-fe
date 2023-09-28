@@ -62,7 +62,7 @@
                                 {{ dosen.nama }}
                             </td>
                             <td>
-                                {{ dosen.rumpun_id }}
+                                {{ dosen.rumpun }}
                             </td>
                             <td>
                                 {{ dosen.load }} SKS
@@ -129,7 +129,7 @@ console.log("Dosen data");
 console.log(dosenData);
 
 const sesi = ['Sesi 1', 'Sesi 2', 'Sesi 3', 'Sesi 4', 'Sesi 5', 'Sesi 6', 'Sesi 7', 'Sesi 8', 'Sesi 9', 'Sesi 10']
-const hari =  ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat']
+const hari = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat']
 const formFormat = [
     {
         'label': "Nama Dosen",

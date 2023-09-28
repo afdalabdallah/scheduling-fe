@@ -126,18 +126,17 @@ const deleteData = async (id) => {
 const onSubmit = async (formData) => {
     console.log("INI FORM DATA DARI PAGE");
     console.log(formData);
-    const { respons } = await useFetch("http://localhost:3000/api/matkul", {
+    let dataArray = []
+    dataArray.push(formData)
+    const { respons, error } = await useFetch("http://localhost:3000/api/matkul", {
         method: "POST",
-        body: {
-            nama: formData.nama,
-            kode_mk: formData.kode_mk,
-            tipe: formData.tipe,
-            sks: formData.sks,
-            semester: formData.semester,
-            rumpun_id: formData.rumpun_id,
-        },
+        body: dataArray,
         headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
     });
+
+    if (error.value != null) {
+        alert(error.value)
+    }
     console.log("INI RESPONSE");
     console.log(respons);
     location.reload()
@@ -210,7 +209,7 @@ const formFormat = [
     },
     {
         'label': "Rumpun",
-        'name': "rumpun",
+        'name': "rumpun_id",
         'type': 'select',
         'options': rumpunOptions
     },
