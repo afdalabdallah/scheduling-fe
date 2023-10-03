@@ -2,7 +2,7 @@
   "data": [
     {
       "dosen": "SF",
-      "mata_kuliah": "SK9999",
+      "mata_kuliah": "UG9999",
       "kelas": "A",
       "ruangan": "999",
       "sesi": "101",
@@ -12,7 +12,7 @@
     },
     {
       "dosen": "SF",
-      "mata_kuliah": "SK9999",
+      "mata_kuliah": "UG9999",
       "kelas": "B",
       "ruangan": "999",
       "sesi": "103",
@@ -22,7 +22,7 @@
     },
     {
       "dosen": "SW",
-      "mata_kuliah": "SK9998",
+      "mata_kuliah": "UG9998",
       "kelas": "A",
       "ruangan": "998",
       "sesi": "107",
@@ -32,7 +32,7 @@
     },
     {
       "dosen": "SI",
-      "mata_kuliah": "SK9997",
+      "mata_kuliah": "UG9997",
       "kelas": "A",
       "ruangan": "997",
       "sesi": "201",
@@ -42,7 +42,7 @@
     },
     {
       "dosen": "SM",
-      "mata_kuliah": "SK9996",
+      "mata_kuliah": "UG9996",
       "kelas": "A",
       "ruangan": "996",
       "sesi": "203",
@@ -52,7 +52,7 @@
     },
     {
       "dosen": "SS",
-      "mata_kuliah": "SK9995",
+      "mata_kuliah": "UG9995",
       "kelas": "A",
       "ruangan": "999",
       "sesi": "207",
@@ -62,7 +62,7 @@
     },
     {
       "dosen": "SM",
-      "mata_kuliah": "SK9996",
+      "mata_kuliah": "UG9996",
       "kelas": "B",
       "ruangan": "996",
       "sesi": "209",
@@ -71,8 +71,8 @@
       "rmk": "SKPB"
     },
     {
-      "dosen": "SK",
-      "mata_kuliah": "SK9994",
+      "dosen": "UG",
+      "mata_kuliah": "UG9994",
       "kelas": "A",
       "ruangan": "994",
       "sesi": "209",
@@ -82,7 +82,7 @@
     },
     {
       "dosen": "SF",
-      "mata_kuliah": "SK9999",
+      "mata_kuliah": "UG9999",
       "kelas": "C",
       "ruangan": "999",
       "sesi": "301",
@@ -92,7 +92,7 @@
     },
     {
       "dosen": "SF",
-      "mata_kuliah": "SK9999",
+      "mata_kuliah": "UG9999",
       "kelas": "D",
       "ruangan": "999",
       "sesi": "303",
@@ -102,7 +102,7 @@
     },
     {
       "dosen": "SW",
-      "mata_kuliah": "SK9998",
+      "mata_kuliah": "UG9998",
       "kelas": "B",
       "ruangan": "998",
       "sesi": "305",
@@ -112,7 +112,7 @@
     },
     {
       "dosen": "SS",
-      "mata_kuliah": "SK9995",
+      "mata_kuliah": "UG9995",
       "kelas": "B",
       "ruangan": "995",
       "sesi": "307",
@@ -122,7 +122,7 @@
     },
     {
       "dosen": "SM",
-      "mata_kuliah": "SK9996",
+      "mata_kuliah": "UG9996",
       "kelas": "C",
       "ruangan": "996",
       "sesi": "403",
@@ -131,8 +131,8 @@
       "rmk": "SKPB"
     },
     {
-      "dosen": "SK",
-      "mata_kuliah": "SK9994",
+      "dosen": "UG",
+      "mata_kuliah": "UG9994",
       "kelas": "B",
       "ruangan": "994",
       "sesi": "405",
@@ -142,7 +142,7 @@
     },
     {
       "dosen": "SI",
-      "mata_kuliah": "SK9997",
+      "mata_kuliah": "UG9997",
       "kelas": "B",
       "ruangan": "997",
       "sesi": "501",
@@ -152,7 +152,7 @@
     },
     {
       "dosen": "SN",
-      "mata_kuliah": "SK9993",
+      "mata_kuliah": "UG9993",
       "kelas": "A",
       "ruangan": "993",
       "sesi": "503",
@@ -162,7 +162,7 @@
     },
     {
       "dosen": "SN",
-      "mata_kuliah": "SK9993",
+      "mata_kuliah": "UG9993",
       "kelas": "B",
       "ruangan": "993",
       "sesi": "504",

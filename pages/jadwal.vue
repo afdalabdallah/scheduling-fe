@@ -24,7 +24,7 @@
                                     105B
                                 </div>
                                 <div v-else>{{ ruangan }}</div>
-                                
+
                             </th>
                         </tr>
                     </thead>
@@ -37,18 +37,17 @@
                                 <div v-for="sesi in listSesi">
                                     Sesi {{ sesi }}
                                 </div>
-                                    
-                               
                             </td>
-                            <td v-for="(dataRuangan, keyRuangan) in hari" >
-                                <div v-for="(sesi, keySesi) in dataRuangan" >
-                                    <div v-if="sesiNotEmpty(sesi)" class="">
+                            <td v-for="(dataRuangan, keyRuangan) in hari">
+                                <div v-for="(sesi, keySesi) in dataRuangan" class="border border-slate-400">
+                                    <div v-if="sesiNotEmpty(sesi)" class="border border-slate-400">
                                         {{ sesi.mata_kuliah }}
                                         {{ sesi.dosen }}
+                                        {{ keySesi }}
                                     </div>
                                     <div v-else>&nbsp; </div>
                                 </div>
-                                
+
                             </td>
 
                         </tr>
@@ -64,7 +63,6 @@
 </template>
 
 <script setup>
-import { list } from 'postcss';
 
 let mockData = reactive([])
 const fetchMock = async () => {
@@ -90,7 +88,7 @@ const listHari = [
     "Senin", "Selasa", "Rabu", "Kamis", "Jumat"
 ]
 
-function sesiNotEmpty (obj){
+function sesiNotEmpty(obj) {
     return Object.keys(obj).length > 0;
 }
 
@@ -104,12 +102,21 @@ const listRuangan = [ //this will be fetched from API later
     "106",
     "107",
     "108",
+    "301",
+    "302",
     "111",
     "112"
 ]
 
+function sortedSesi(dataRuangan) {
+    // Convert keys to integers and sort them numerically
+    const keys = Object.keys(dataRuangan).map(Number).sort((a, b) => a - b);
+    // Convert back to strings
+    return keys.map(String);
+}
+
 const listSesi = [ //this will be fetched later from API
-    "1","2","3","4","5","6","7","8","9","10"
+    "01", "02", "03", "04", "05", "06", "07", "08", "09", "10"
 ]
 
 listHari.forEach((data) => {
@@ -126,7 +133,7 @@ listHari.forEach((data) => {
         })
     })
 
-    
+
 })
 
 
@@ -138,15 +145,21 @@ mockData.sort((a, b) => {
 })
 
 console.log(processedData);
-console.log(mockData)
+// console.log("MockData");
+// console.log(mockData)
 mockData.forEach((data) => {
+    // console.log(data);
     const ruanganKey = data.ruangan
-    const dayKey = data.sesi.charAt(0).toLocaleLowerCase();
+    const dayKey = data.sesi.charAt(0);
     const dayKeyStr = dayDict[dayKey]
-    processedData[dayKeyStr][ruanganKey][data.sesi[2]] = data
+    // console.log(data.sesi.substring(1, 4));
+    // console.log(ruanganKey);
+    // console.log(dayKey);
+    // console.log(dayKeyStr);
+    processedData[dayKeyStr][ruanganKey][data.sesi.substring(1, 4)] = data
 })
 
 
 // // const sortedData = sortDataBySesi(processedData)
-// console.log(processedData);
+console.log(processedData);
 </script>

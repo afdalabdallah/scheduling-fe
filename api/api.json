@@ -4,9 +4,12 @@
       "dosen": "SD",
       "mata_kuliah": "IF4201",
       "kelas": "A",
-      "ruangan": "107",
-      "sesi": "309",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "105",
+      "sesi": "301",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -15,8 +18,11 @@
       "mata_kuliah": "IF4201",
       "kelas": "A",
       "ruangan": "104",
-      "sesi": "307",
-      "preferensi": ["Pagi", "Siang"],
+      "sesi": "201",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -25,8 +31,11 @@
       "mata_kuliah": "IF4201",
       "kelas": "I",
       "ruangan": "501",
-      "sesi": "107",
-      "preferensi": ["Pagi", "Siang"],
+      "sesi": "405",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -34,9 +43,12 @@
       "dosen": "RA",
       "mata_kuliah": "IF4947",
       "kelas": "A",
-      "ruangan": "111",
-      "sesi": "101",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "108",
+      "sesi": "509",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "KBJ"
     },
@@ -44,9 +56,12 @@
       "dosen": "RM",
       "mata_kuliah": "IF4602",
       "kelas": "A",
-      "ruangan": "102",
-      "sesi": "405",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "111",
+      "sesi": "203",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "KBJ"
     },
@@ -54,9 +69,12 @@
       "dosen": "RM",
       "mata_kuliah": "IF4602",
       "kelas": "B",
-      "ruangan": "108",
-      "sesi": "105",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "112",
+      "sesi": "403",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "KBJ"
     },
@@ -64,9 +82,12 @@
       "dosen": "WS",
       "mata_kuliah": "IF4201",
       "kelas": "C",
-      "ruangan": "105",
-      "sesi": "103",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "302",
+      "sesi": "309",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -74,9 +95,12 @@
       "dosen": "WS",
       "mata_kuliah": "IF4201",
       "kelas": "D",
-      "ruangan": "112",
-      "sesi": "303",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "301",
+      "sesi": "505",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -84,9 +108,12 @@
       "dosen": "WS",
       "mata_kuliah": "IF4201",
       "kelas": "E",
-      "ruangan": "101",
-      "sesi": "305",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "102",
+      "sesi": "307",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -94,9 +121,12 @@
       "dosen": "WS",
       "mata_kuliah": "IF4402",
       "kelas": "A",
-      "ruangan": "106",
-      "sesi": "203",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "107",
+      "sesi": "207",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -105,8 +135,20 @@
       "mata_kuliah": "IF4201",
       "kelas": "F",
       "ruangan": "103",
-      "sesi": "401",
-      "preferensi": ["Pagi", "Sore"],
+      "sesi": "303",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -114,9 +156,21 @@
       "dosen": "TA",
       "mata_kuliah": "IF4201",
       "kelas": "G",
-      "ruangan": "107",
-      "sesi": "403",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "106",
+      "sesi": "305",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -124,9 +178,23 @@
       "dosen": "BM",
       "mata_kuliah": "IF4402",
       "kelas": "I",
-      "ruangan": "104",
-      "sesi": "201",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "101",
+      "sesi": "109",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -134,9 +202,21 @@
       "dosen": "BJ",
       "mata_kuliah": "IF4402",
       "kelas": "B",
-      "ruangan": "501",
-      "sesi": "509",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "105",
+      "sesi": "401",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -144,9 +224,21 @@
       "dosen": "BJ",
       "mata_kuliah": "IF4602",
       "kelas": "C",
-      "ruangan": "111",
-      "sesi": "205",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "104",
+      "sesi": "107",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "KBJ"
     },
@@ -154,9 +246,23 @@
       "dosen": "BH",
       "mata_kuliah": "IF4602",
       "kelas": "I",
-      "ruangan": "102",
-      "sesi": "505",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "501",
+      "sesi": "407",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "KBJ"
     },
@@ -165,8 +271,20 @@
       "mata_kuliah": "IF4402",
       "kelas": "C",
       "ruangan": "108",
-      "sesi": "209",
-      "preferensi": ["Pagi", "Sore"],
+      "sesi": "105",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -174,9 +292,21 @@
       "dosen": "AM",
       "mata_kuliah": "IF4402",
       "kelas": "D",
-      "ruangan": "105",
-      "sesi": "503",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "111",
+      "sesi": "209",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -185,8 +315,22 @@
       "mata_kuliah": "IF4402",
       "kelas": "E",
       "ruangan": "112",
-      "sesi": "407",
-      "preferensi": ["Pagi", "Sore"],
+      "sesi": "501",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -194,9 +338,23 @@
       "dosen": "HB",
       "mata_kuliah": "IF4402",
       "kelas": "F",
-      "ruangan": "101",
-      "sesi": "507",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "302",
+      "sesi": "103",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -204,9 +362,12 @@
       "dosen": "HS",
       "mata_kuliah": "IF4602",
       "kelas": "D",
-      "ruangan": "106",
-      "sesi": "207",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "301",
+      "sesi": "205",
+      "preferensi": {
+        "hari": ["Rabu", "Kamis"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "KBJ"
     },
@@ -214,9 +375,12 @@
       "dosen": "HS",
       "mata_kuliah": "IF4945",
       "kelas": "A",
-      "ruangan": "103",
-      "sesi": "109",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "102",
+      "sesi": "409",
+      "preferensi": {
+        "hari": ["Rabu", "Kamis"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "KBJ"
     },
@@ -225,8 +389,11 @@
       "mata_kuliah": "IF4913",
       "kelas": "A",
       "ruangan": "107",
-      "sesi": "409",
-      "preferensi": ["Pagi", "Sore"],
+      "sesi": "101",
+      "preferensi": {
+        "hari": ["Senin", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     },
@@ -234,9 +401,12 @@
       "dosen": "BS",
       "mata_kuliah": "IF4701",
       "kelas": "A",
-      "ruangan": "104",
-      "sesi": "501",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "103",
+      "sesi": "503",
+      "preferensi": {
+        "hari": ["Senin", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "KBJ"
     },
@@ -244,9 +414,12 @@
       "dosen": "BS",
       "mata_kuliah": "IF4701",
       "kelas": "I",
-      "ruangan": "501",
-      "sesi": "301",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "106",
+      "sesi": "507",
+      "preferensi": {
+        "hari": ["Senin", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "KBJ"
     },
@@ -254,9 +427,12 @@
       "dosen": "BS",
       "mata_kuliah": "IF4602",
       "kelas": "E",
-      "ruangan": "111",
-      "sesi": "309",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "101",
+      "sesi": "301",
+      "preferensi": {
+        "hari": ["Senin", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "KBJ"
     },
@@ -264,9 +440,12 @@
       "dosen": "YP",
       "mata_kuliah": "IF4101",
       "kelas": "A",
-      "ruangan": "102",
-      "sesi": "307",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "105",
+      "sesi": "201",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -274,9 +453,12 @@
       "dosen": "YP",
       "mata_kuliah": "IF4202",
       "kelas": "A",
-      "ruangan": "108",
-      "sesi": "107",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "104",
+      "sesi": "405",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -284,9 +466,12 @@
       "dosen": "YP",
       "mata_kuliah": "IF4202",
       "kelas": "B",
-      "ruangan": "105",
-      "sesi": "101",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "501",
+      "sesi": "509",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -294,9 +479,12 @@
       "dosen": "DP",
       "mata_kuliah": "IF4202",
       "kelas": "C",
-      "ruangan": "112",
-      "sesi": "405",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "108",
+      "sesi": "203",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -304,9 +492,12 @@
       "dosen": "DP",
       "mata_kuliah": "IF4202",
       "kelas": "I",
-      "ruangan": "101",
-      "sesi": "105",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "111",
+      "sesi": "403",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -314,9 +505,12 @@
       "dosen": "DP",
       "mata_kuliah": "IF4957",
       "kelas": "A",
-      "ruangan": "106",
-      "sesi": "103",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "112",
+      "sesi": "309",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "KCV"
     },
@@ -324,9 +518,21 @@
       "dosen": "AR",
       "mata_kuliah": "IF4202",
       "kelas": "D",
-      "ruangan": "103",
-      "sesi": "303",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "302",
+      "sesi": "505",
+      "preferensi": {
+        "hari": ["Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -334,9 +540,21 @@
       "dosen": "AR",
       "mata_kuliah": "IF4202",
       "kelas": "E",
-      "ruangan": "107",
-      "sesi": "305",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "301",
+      "sesi": "307",
+      "preferensi": {
+        "hari": ["Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -344,9 +562,21 @@
       "dosen": "RL",
       "mata_kuliah": "IF4401",
       "kelas": "A",
-      "ruangan": "104",
-      "sesi": "203",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "102",
+      "sesi": "207",
+      "preferensi": {
+        "hari": ["Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -354,9 +584,21 @@
       "dosen": "RL",
       "mata_kuliah": "IF4401",
       "kelas": "B",
-      "ruangan": "501",
-      "sesi": "401",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "107",
+      "sesi": "303",
+      "preferensi": {
+        "hari": ["Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -364,9 +606,21 @@
       "dosen": "RL",
       "mata_kuliah": "IF4401",
       "kelas": "C",
-      "ruangan": "111",
-      "sesi": "403",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "103",
+      "sesi": "305",
+      "preferensi": {
+        "hari": ["Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -374,9 +628,21 @@
       "dosen": "RL",
       "mata_kuliah": "IF4902",
       "kelas": "A",
-      "ruangan": "102",
-      "sesi": "201",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "106",
+      "sesi": "109",
+      "preferensi": {
+        "hari": ["Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -384,9 +650,12 @@
       "dosen": "DS",
       "mata_kuliah": "IF4202",
       "kelas": "F",
-      "ruangan": "108",
-      "sesi": "509",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "101",
+      "sesi": "401",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -395,8 +664,11 @@
       "mata_kuliah": "IF4202",
       "kelas": "G",
       "ruangan": "105",
-      "sesi": "205",
-      "preferensi": ["Pagi", "Sore"],
+      "sesi": "107",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -404,9 +676,12 @@
       "dosen": "DS",
       "mata_kuliah": "IF4404",
       "kelas": "A",
-      "ruangan": "112",
-      "sesi": "505",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "104",
+      "sesi": "407",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -414,9 +689,23 @@
       "dosen": "FB",
       "mata_kuliah": "IF4605",
       "kelas": "A",
-      "ruangan": "101",
-      "sesi": "209",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "501",
+      "sesi": "105",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -424,9 +713,23 @@
       "dosen": "FB",
       "mata_kuliah": "IF4605",
       "kelas": "B",
-      "ruangan": "106",
-      "sesi": "503",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "108",
+      "sesi": "209",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -434,9 +737,23 @@
       "dosen": "FB",
       "mata_kuliah": "IF4504",
       "kelas": "A",
-      "ruangan": "103",
-      "sesi": "407",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "111",
+      "sesi": "501",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -444,9 +761,23 @@
       "dosen": "FB",
       "mata_kuliah": "IF4406",
       "kelas": "A",
-      "ruangan": "107",
-      "sesi": "507",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "112",
+      "sesi": "103",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -454,9 +785,23 @@
       "dosen": "FB",
       "mata_kuliah": "IF4406",
       "kelas": "B",
-      "ruangan": "104",
-      "sesi": "207",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "302",
+      "sesi": "205",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -464,9 +809,12 @@
       "dosen": "AB",
       "mata_kuliah": "IF4401",
       "kelas": "D",
-      "ruangan": "501",
-      "sesi": "109",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "301",
+      "sesi": "409",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -474,9 +822,12 @@
       "dosen": "AB",
       "mata_kuliah": "IF4401",
       "kelas": "E",
-      "ruangan": "111",
-      "sesi": "409",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "102",
+      "sesi": "101",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -484,9 +835,12 @@
       "dosen": "AB",
       "mata_kuliah": "IF4401",
       "kelas": "I",
-      "ruangan": "102",
-      "sesi": "501",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "107",
+      "sesi": "503",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -494,9 +848,12 @@
       "dosen": "IS",
       "mata_kuliah": "IF4401",
       "kelas": "F",
-      "ruangan": "108",
-      "sesi": "301",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "103",
+      "sesi": "507",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -504,9 +861,12 @@
       "dosen": "IS",
       "mata_kuliah": "IF4401",
       "kelas": "G",
-      "ruangan": "105",
-      "sesi": "309",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "106",
+      "sesi": "301",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -514,9 +874,12 @@
       "dosen": "IS",
       "mata_kuliah": "IF4401",
       "kelas": "H",
-      "ruangan": "112",
-      "sesi": "307",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "101",
+      "sesi": "201",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -524,9 +887,12 @@
       "dosen": "IS",
       "mata_kuliah": "IF4504",
       "kelas": "I",
-      "ruangan": "101",
-      "sesi": "107",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "105",
+      "sesi": "405",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -534,9 +900,23 @@
       "dosen": "RR",
       "mata_kuliah": "IF4963",
       "kelas": "A",
-      "ruangan": "106",
-      "sesi": "101",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "104",
+      "sesi": "509",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "MCI"
     },
@@ -544,9 +924,21 @@
       "dosen": "AL",
       "mata_kuliah": "IF4964",
       "kelas": "F",
-      "ruangan": "103",
-      "sesi": "405",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "501",
+      "sesi": "203",
+      "preferensi": {
+        "hari": ["Senin", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "MCI"
     },
@@ -554,9 +946,21 @@
       "dosen": "AL",
       "mata_kuliah": "IF4603",
       "kelas": "A",
-      "ruangan": "107",
-      "sesi": "105",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "108",
+      "sesi": "403",
+      "preferensi": {
+        "hari": ["Senin", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -564,9 +968,21 @@
       "dosen": "AL",
       "mata_kuliah": "IF4406",
       "kelas": "C",
-      "ruangan": "104",
-      "sesi": "103",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "111",
+      "sesi": "309",
+      "preferensi": {
+        "hari": ["Senin", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -574,9 +990,21 @@
       "dosen": "AL",
       "mata_kuliah": "IF4406",
       "kelas": "I",
-      "ruangan": "501",
-      "sesi": "303",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "112",
+      "sesi": "505",
+      "preferensi": {
+        "hari": ["Senin", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -584,9 +1012,12 @@
       "dosen": "MN",
       "mata_kuliah": "IF4605",
       "kelas": "C",
-      "ruangan": "111",
-      "sesi": "305",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "302",
+      "sesi": "307",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -594,9 +1025,12 @@
       "dosen": "MN",
       "mata_kuliah": "IF4605",
       "kelas": "I",
-      "ruangan": "102",
-      "sesi": "203",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "301",
+      "sesi": "207",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -604,9 +1038,12 @@
       "dosen": "MN",
       "mata_kuliah": "IF4404",
       "kelas": "B",
-      "ruangan": "108",
-      "sesi": "401",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "102",
+      "sesi": "303",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "MCI"
     },
@@ -614,9 +1051,23 @@
       "dosen": "MK",
       "mata_kuliah": "IF4404",
       "kelas": "I",
-      "ruangan": "105",
-      "sesi": "403",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "107",
+      "sesi": "305",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "MCI"
     },
@@ -624,9 +1075,12 @@
       "dosen": "MN",
       "mata_kuliah": "IF4966",
       "kelas": "A",
-      "ruangan": "112",
-      "sesi": "201",
-      "preferensi": ["Pagi", "Sore"],
+      "ruangan": "103",
+      "sesi": "109",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 1", "Sesi 2", "Sesi 3", "Sesi 4"]
+      },
       "tipe": "jurusan",
       "rmk": "MCI"
     },
@@ -634,9 +1088,21 @@
       "dosen": "KR",
       "mata_kuliah": "IF4404",
       "kelas": "C",
-      "ruangan": "101",
-      "sesi": "509",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "106",
+      "sesi": "401",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "MCI"
     },
@@ -644,9 +1110,21 @@
       "dosen": "KR",
       "mata_kuliah": "TI4411",
       "kelas": "A",
-      "ruangan": "106",
-      "sesi": "205",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "101",
+      "sesi": "107",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "TI"
     },
@@ -654,9 +1132,21 @@
       "dosen": "SC",
       "mata_kuliah": "IF4404",
       "kelas": "D",
-      "ruangan": "103",
-      "sesi": "505",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "105",
+      "sesi": "407",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "MCI"
     },
@@ -664,9 +1154,21 @@
       "dosen": "SC",
       "mata_kuliah": "IF4403",
       "kelas": "I",
-      "ruangan": "107",
-      "sesi": "209",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "104",
+      "sesi": "105",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "KCV"
     },
@@ -674,9 +1176,21 @@
       "dosen": "SC",
       "mata_kuliah": "TI4411",
       "kelas": "B",
-      "ruangan": "104",
-      "sesi": "503",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "501",
+      "sesi": "209",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "TI"
     },
@@ -684,9 +1198,23 @@
       "dosen": "OJ",
       "mata_kuliah": "IF4946",
       "kelas": "A",
-      "ruangan": "501",
-      "sesi": "407",
-      "preferensi": [],
+      "ruangan": "108",
+      "sesi": "501",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "KBJ"
     },
@@ -695,8 +1223,22 @@
       "mata_kuliah": "IF4101",
       "kelas": "A",
       "ruangan": "111",
-      "sesi": "507",
-      "preferensi": [],
+      "sesi": "103",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -704,9 +1246,12 @@
       "dosen": "RJ",
       "mata_kuliah": "IF4605",
       "kelas": "D",
-      "ruangan": "102",
-      "sesi": "207",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "112",
+      "sesi": "205",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -714,9 +1259,12 @@
       "dosen": "RJ",
       "mata_kuliah": "IF4605",
       "kelas": "E",
-      "ruangan": "108",
-      "sesi": "109",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "302",
+      "sesi": "409",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -724,9 +1272,23 @@
       "dosen": "MR",
       "mata_kuliah": "IF4903",
       "kelas": "A",
-      "ruangan": "105",
-      "sesi": "409",
-      "preferensi": [],
+      "ruangan": "301",
+      "sesi": "101",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AP"
     },
@@ -734,9 +1296,23 @@
       "dosen": "RN",
       "mata_kuliah": "IF4404",
       "kelas": "E",
-      "ruangan": "112",
-      "sesi": "501",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "102",
+      "sesi": "503",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "MCI"
     },
@@ -744,9 +1320,12 @@
       "dosen": "SR",
       "mata_kuliah": "IF4404",
       "kelas": "F",
-      "ruangan": "101",
-      "sesi": "301",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "107",
+      "sesi": "507",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "MCI"
     },
@@ -754,9 +1333,23 @@
       "dosen": "RN",
       "mata_kuliah": "IF4603",
       "kelas": "B",
-      "ruangan": "106",
-      "sesi": "309",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "103",
+      "sesi": "301",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -764,9 +1357,23 @@
       "dosen": "RN",
       "mata_kuliah": "IF4603",
       "kelas": "C",
-      "ruangan": "103",
-      "sesi": "307",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "106",
+      "sesi": "201",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -774,9 +1381,12 @@
       "dosen": "UY",
       "mata_kuliah": "IF4603",
       "kelas": "D",
-      "ruangan": "107",
-      "sesi": "107",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "101",
+      "sesi": "405",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -784,9 +1394,12 @@
       "dosen": "UY",
       "mata_kuliah": "IF4603",
       "kelas": "E",
-      "ruangan": "104",
-      "sesi": "101",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "105",
+      "sesi": "509",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -794,9 +1407,21 @@
       "dosen": "DO",
       "mata_kuliah": "IF4603",
       "kelas": "F",
-      "ruangan": "501",
-      "sesi": "405",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "104",
+      "sesi": "203",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -804,9 +1429,23 @@
       "dosen": "RN",
       "mata_kuliah": "IF4603",
       "kelas": "I",
-      "ruangan": "111",
-      "sesi": "105",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "501",
+      "sesi": "403",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -814,9 +1453,21 @@
       "dosen": "ST",
       "mata_kuliah": "IF4406",
       "kelas": "D",
-      "ruangan": "102",
-      "sesi": "103",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "108",
+      "sesi": "309",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -824,9 +1475,12 @@
       "dosen": "SR",
       "mata_kuliah": "IF4406",
       "kelas": "E",
-      "ruangan": "108",
-      "sesi": "303",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "111",
+      "sesi": "505",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -834,9 +1488,12 @@
       "dosen": "SR",
       "mata_kuliah": "IF4406",
       "kelas": "F",
-      "ruangan": "105",
-      "sesi": "305",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "112",
+      "sesi": "307",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -844,9 +1501,12 @@
       "dosen": "RJ",
       "mata_kuliah": "IF4971",
       "kelas": "A",
-      "ruangan": "112",
-      "sesi": "203",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "302",
+      "sesi": "207",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -854,9 +1514,21 @@
       "dosen": "ST",
       "mata_kuliah": "IF4972",
       "kelas": "A",
-      "ruangan": "101",
-      "sesi": "401",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "301",
+      "sesi": "303",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "RPL"
     },
@@ -864,9 +1536,12 @@
       "dosen": "DA",
       "mata_kuliah": "IF4403",
       "kelas": "A",
-      "ruangan": "106",
-      "sesi": "403",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "102",
+      "sesi": "305",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+      },
       "tipe": "jurusan",
       "rmk": "KCV"
     },
@@ -874,9 +1549,12 @@
       "dosen": "DA",
       "mata_kuliah": "IF4403",
       "kelas": "B",
-      "ruangan": "103",
-      "sesi": "201",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "107",
+      "sesi": "109",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+      },
       "tipe": "jurusan",
       "rmk": "KCV"
     },
@@ -884,9 +1562,21 @@
       "dosen": "NS",
       "mata_kuliah": "IF4403",
       "kelas": "C",
-      "ruangan": "107",
-      "sesi": "509",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "103",
+      "sesi": "401",
+      "preferensi": {
+        "hari": ["Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "KCV"
     },
@@ -894,9 +1584,9 @@
       "dosen": "AY",
       "mata_kuliah": "IF4403",
       "kelas": "D",
-      "ruangan": "104",
-      "sesi": "205",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "106",
+      "sesi": "107",
+      "preferensi": { "hari": ["Selasa"], "sesi": ["Sesi 9", "Sesi 10"] },
       "tipe": "jurusan",
       "rmk": "KCV"
     },
@@ -904,9 +1594,21 @@
       "dosen": "CF",
       "mata_kuliah": "IF4403",
       "kelas": "E",
-      "ruangan": "501",
-      "sesi": "505",
-      "preferensi": ["Siang"],
+      "ruangan": "101",
+      "sesi": "407",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "KCV"
     },
@@ -914,9 +1616,12 @@
       "dosen": "DH",
       "mata_kuliah": "IF4403",
       "kelas": "F",
-      "ruangan": "111",
-      "sesi": "209",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "105",
+      "sesi": "105",
+      "preferensi": {
+        "hari": ["Senin", "Rabu", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "KCV"
     },
@@ -924,9 +1629,12 @@
       "dosen": "DA",
       "mata_kuliah": "IF4951",
       "kelas": "A",
-      "ruangan": "102",
-      "sesi": "503",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "104",
+      "sesi": "209",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+      },
       "tipe": "jurusan",
       "rmk": "KCV"
     },
@@ -934,9 +1642,12 @@
       "dosen": "HT",
       "mata_kuliah": "IF4952",
       "kelas": "A",
-      "ruangan": "108",
-      "sesi": "407",
-      "preferensi": ["Pagi"],
+      "ruangan": "501",
+      "sesi": "501",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": ["Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "KCV"
     },
@@ -944,9 +1655,21 @@
       "dosen": "CF",
       "mata_kuliah": "IF4958",
       "kelas": "A",
-      "ruangan": "105",
-      "sesi": "507",
-      "preferensi": ["Siang"],
+      "ruangan": "108",
+      "sesi": "103",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "KCV"
     },
@@ -954,9 +1677,23 @@
       "dosen": "AW",
       "mata_kuliah": "IF4405",
       "kelas": "A",
-      "ruangan": "112",
-      "sesi": "207",
-      "preferensi": ["Pagi"],
+      "ruangan": "111",
+      "sesi": "205",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -964,9 +1701,23 @@
       "dosen": "AW",
       "mata_kuliah": "IF4405",
       "kelas": "B",
-      "ruangan": "101",
-      "sesi": "109",
-      "preferensi": ["Pagi"],
+      "ruangan": "112",
+      "sesi": "409",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -974,9 +1725,23 @@
       "dosen": "AS",
       "mata_kuliah": "IF4405",
       "kelas": "C",
-      "ruangan": "106",
-      "sesi": "409",
-      "preferensi": ["Siang", "Sore"],
+      "ruangan": "302",
+      "sesi": "101",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -984,9 +1749,21 @@
       "dosen": "BA",
       "mata_kuliah": "IF4405",
       "kelas": "D",
-      "ruangan": "103",
-      "sesi": "501",
-      "preferensi": ["Pagi"],
+      "ruangan": "301",
+      "sesi": "503",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -994,9 +1771,21 @@
       "dosen": "BA",
       "mata_kuliah": "IF4405",
       "kelas": "E",
-      "ruangan": "107",
-      "sesi": "301",
-      "preferensi": ["Pagi"],
+      "ruangan": "102",
+      "sesi": "507",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1004,9 +1793,21 @@
       "dosen": "BA",
       "mata_kuliah": "IF4405",
       "kelas": "F",
-      "ruangan": "104",
-      "sesi": "309",
-      "preferensi": ["Pagi"],
+      "ruangan": "107",
+      "sesi": "301",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1014,9 +1815,23 @@
       "dosen": "JL",
       "mata_kuliah": "IF4405",
       "kelas": "I",
-      "ruangan": "501",
-      "sesi": "307",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "103",
+      "sesi": "201",
+      "preferensi": {
+        "hari": ["Senin", "Selasa"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1024,9 +1839,21 @@
       "dosen": "VH",
       "mata_kuliah": "IF4604",
       "kelas": "A",
-      "ruangan": "111",
-      "sesi": "107",
-      "preferensi": ["Siang", "Sore"],
+      "ruangan": "106",
+      "sesi": "405",
+      "preferensi": {
+        "hari": ["Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1034,9 +1861,21 @@
       "dosen": "VH",
       "mata_kuliah": "IF4604",
       "kelas": "B",
-      "ruangan": "102",
-      "sesi": "101",
-      "preferensi": ["Siang", "Sore"],
+      "ruangan": "101",
+      "sesi": "509",
+      "preferensi": {
+        "hari": ["Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1044,9 +1883,21 @@
       "dosen": "VH",
       "mata_kuliah": "IF4604",
       "kelas": "C",
-      "ruangan": "108",
-      "sesi": "405",
-      "preferensi": ["Siang", "Sore"],
+      "ruangan": "105",
+      "sesi": "203",
+      "preferensi": {
+        "hari": ["Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1054,9 +1905,23 @@
       "dosen": "AW",
       "mata_kuliah": "IF4604",
       "kelas": "D",
-      "ruangan": "105",
-      "sesi": "105",
-      "preferensi": ["Pagi"],
+      "ruangan": "104",
+      "sesi": "403",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1064,9 +1929,23 @@
       "dosen": "AW",
       "mata_kuliah": "IF4604",
       "kelas": "E",
-      "ruangan": "112",
-      "sesi": "103",
-      "preferensi": ["Pagi"],
+      "ruangan": "501",
+      "sesi": "309",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1074,9 +1953,23 @@
       "dosen": "DZ",
       "mata_kuliah": "IF4604",
       "kelas": "I",
-      "ruangan": "101",
-      "sesi": "303",
-      "preferensi": [],
+      "ruangan": "108",
+      "sesi": "505",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1084,9 +1977,23 @@
       "dosen": "AS",
       "mata_kuliah": "IF4922",
       "kelas": "A",
-      "ruangan": "106",
-      "sesi": "305",
-      "preferensi": ["Siang", "Sore"],
+      "ruangan": "111",
+      "sesi": "307",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1094,9 +2001,23 @@
       "dosen": "JL",
       "mata_kuliah": "IF4921",
       "kelas": "A",
-      "ruangan": "103",
-      "sesi": "203",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "112",
+      "sesi": "207",
+      "preferensi": {
+        "hari": ["Senin", "Selasa"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1104,9 +2025,21 @@
       "dosen": "VH",
       "mata_kuliah": "IF4304",
       "kelas": "A",
-      "ruangan": "107",
-      "sesi": "401",
-      "preferensi": ["Siang", "Sore"],
+      "ruangan": "302",
+      "sesi": "303",
+      "preferensi": {
+        "hari": ["Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1114,9 +2047,23 @@
       "dosen": "DZ",
       "mata_kuliah": "IF4304",
       "kelas": "I",
-      "ruangan": "104",
-      "sesi": "403",
-      "preferensi": [],
+      "ruangan": "301",
+      "sesi": "305",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PKT"
     },
@@ -1124,9 +2071,23 @@
       "dosen": "HF",
       "mata_kuliah": "IF4601",
       "kelas": "A",
-      "ruangan": "501",
-      "sesi": "201",
-      "preferensi": ["Siang", "Sore"],
+      "ruangan": "102",
+      "sesi": "109",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "GIGA"
     },
@@ -1134,9 +2095,23 @@
       "dosen": "HF",
       "mata_kuliah": "IF4602",
       "kelas": "B",
-      "ruangan": "111",
-      "sesi": "509",
-      "preferensi": ["Siang", "Sore"],
+      "ruangan": "107",
+      "sesi": "401",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "GIGA"
     },
@@ -1144,9 +2119,23 @@
       "dosen": "SA",
       "mata_kuliah": "IF4603",
       "kelas": "C",
-      "ruangan": "102",
-      "sesi": "205",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "103",
+      "sesi": "107",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "GIGA"
     },
@@ -1154,9 +2143,23 @@
       "dosen": "SA",
       "mata_kuliah": "IF4604",
       "kelas": "D",
-      "ruangan": "108",
-      "sesi": "505",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "106",
+      "sesi": "407",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "GIGA"
     },
@@ -1164,19 +2167,36 @@
       "dosen": "AB",
       "mata_kuliah": "IF4605",
       "kelas": "I",
-      "ruangan": "105",
-      "sesi": "209",
-      "preferensi": ["Siang", "Sore"],
+      "ruangan": "101",
+      "sesi": "105",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "GIGA"
     },
     {
       "dosen": "DH",
-      "mata_kuliah": " IF4935",
+      "mata_kuliah": "IF4935",
       "kelas": "A",
-      "ruangan": "112",
-      "sesi": "503",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "105",
+      "sesi": "209",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "GIGA"
     },
@@ -1184,9 +2204,21 @@
       "dosen": "IM",
       "mata_kuliah": "IF4933",
       "kelas": "A",
-      "ruangan": "101",
-      "sesi": "407",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "104",
+      "sesi": "501",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "GIGA"
     },
@@ -1194,9 +2226,23 @@
       "dosen": "SA",
       "mata_kuliah": "IF4934",
       "kelas": "A",
-      "ruangan": "106",
-      "sesi": "507",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "501",
+      "sesi": "103",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "GIGA"
     },
@@ -1204,9 +2250,23 @@
       "dosen": "SA",
       "mata_kuliah": "IF4502",
       "kelas": "A",
-      "ruangan": "103",
-      "sesi": "207",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "108",
+      "sesi": "205",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "GIGA"
     },
@@ -1214,9 +2274,12 @@
       "dosen": "AB",
       "mata_kuliah": "IF4502",
       "kelas": "I",
-      "ruangan": "107",
-      "sesi": "109",
-      "preferensi": ["Siang", "Sore"],
+      "ruangan": "111",
+      "sesi": "409",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "GIGA"
     },
@@ -1224,9 +2287,21 @@
       "dosen": "RL",
       "mata_kuliah": "IF4982",
       "kelas": "A",
-      "ruangan": "104",
-      "sesi": "409",
-      "preferensi": ["Pagi", "Siang"],
+      "ruangan": "112",
+      "sesi": "101",
+      "preferensi": {
+        "hari": ["Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PNY"
     },
@@ -1234,9 +2309,12 @@
       "dosen": "DA",
       "mata_kuliah": "IF4986",
       "kelas": "A",
-      "ruangan": "501",
-      "sesi": "501",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "302",
+      "sesi": "503",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu", "Kamis"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8"]
+      },
       "tipe": "jurusan",
       "rmk": "PNY"
     },
@@ -1244,9 +2322,21 @@
       "dosen": "IM",
       "mata_kuliah": "IF4985",
       "kelas": "A",
-      "ruangan": "111",
-      "sesi": "301",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "301",
+      "sesi": "507",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "PNY"
     },
@@ -1255,8 +2345,20 @@
       "mata_kuliah": "TI4411",
       "kelas": "A",
       "ruangan": "102",
-      "sesi": "309",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "sesi": "301",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "TI"
     },
@@ -1264,9 +2366,21 @@
       "dosen": "IM",
       "mata_kuliah": "TI4411",
       "kelas": "A",
-      "ruangan": "108",
-      "sesi": "307",
-      "preferensi": ["Pagi", "Siang", "Sore"],
+      "ruangan": "107",
+      "sesi": "201",
+      "preferensi": {
+        "hari": ["Selasa", "Rabu"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "TI"
     },
@@ -1274,9 +2388,12 @@
       "dosen": "AB",
       "mata_kuliah": "TI4411",
       "kelas": "I",
-      "ruangan": "105",
-      "sesi": "107",
-      "preferensi": ["Siang", "Sore"],
+      "ruangan": "103",
+      "sesi": "405",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": ["Sesi 5", "Sesi 6", "Sesi 7", "Sesi 8", "Sesi 9", "Sesi 10"]
+      },
       "tipe": "jurusan",
       "rmk": "TI"
     },
@@ -1284,9 +2401,23 @@
       "dosen": "MM",
       "mata_kuliah": "IF4914",
       "kelas": "A",
-      "ruangan": "112",
-      "sesi": "101",
-      "preferensi": [],
+      "ruangan": "106",
+      "sesi": "509",
+      "preferensi": {
+        "hari": ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+        "sesi": [
+          "Sesi 1",
+          "Sesi 2",
+          "Sesi 3",
+          "Sesi 4",
+          "Sesi 5",
+          "Sesi 6",
+          "Sesi 7",
+          "Sesi 8",
+          "Sesi 9",
+          "Sesi 10"
+        ]
+      },
       "tipe": "jurusan",
       "rmk": "AJK"
     }
