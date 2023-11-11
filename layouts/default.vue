@@ -67,6 +67,7 @@
             </NuxtLink>
 
           </li>
+
           <li class="mb-1">
             <NuxtLink to="/perkuliahan" active-class="active-link">
               <div class="flex items-center gap-1">
@@ -84,6 +85,14 @@
               </div>
             </NuxtLink>
 
+          </li>
+          <li class="mb-1">
+            <NuxtLink to="/ruangan" active-class="active-link">
+              <div class="flex items-center gap-1">
+                <img class="w-[24px] h-[24px]" src="/img/dosen_icon.svg" />
+                Ruangan
+              </div>
+            </NuxtLink>
           </li>
         </ul>
       </div>
