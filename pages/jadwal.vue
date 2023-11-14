@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <p class=" font-bold text-xl mb-1">PERKULIAHAN</p>
+        <p class=" font-bold text-xl mb-1">JADWAL</p>
         <div class="bg-white rounded-lg">
 
             <div class=" overflow-x-auto">
@@ -14,7 +14,11 @@
                 <div class="grid">
                   
                 </div> -->
-                <table class="table table-sm table-fixed">
+                <div class="">
+                    <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="Generate Jadwal"
+                        table="jadwal" />
+                </div>
+                <table class="table table-sm table-fixed" v-if="mockData.length > 0">
                     <thead class="bg-[#E9F4FF] text-black">
                         <tr>
                             <th>Hari</th>
@@ -91,21 +95,19 @@ function sesiNotEmpty(obj) {
     return Object.keys(obj).length > 0;
 }
 
-const listRuangan = [ //this will be fetched from API later
-    "101",
-    "102",
-    "103",
-    "104",
-    "105",
-    "501",
-    "106",
-    "107",
-    "108",
-    "301",
-    "302",
-    "111",
-    "112"
-]
+let getListRuangan = ref([])
+const getRuangan = async () => {
+    const { data } = await useFetch("http://localhost:3000/api/ruangan");
+    getListRuangan = data.value
+    console.log(getListRuangan);
+}
+await getRuangan()
+
+let listRuangan = []
+
+getListRuangan.forEach((ruangan) => {
+    listRuangan.push(ruangan.nomor_ruangan)
+})
 
 function sortedSesi(dataRuangan) {
     // Convert keys to integers and sort them numerically
@@ -143,9 +145,9 @@ mockData.sort((a, b) => {
     return sesiA - sesiB
 })
 
-console.log(processedData);
+// console.log(processedData);
 // console.log("MockData");
-// console.log(mockData)
+console.log(mockData)
 mockData.forEach((data) => {
     // console.log(data);
     const ruanganKey = data.ruangan
@@ -165,4 +167,63 @@ mockData.forEach((data) => {
 
 // // const sortedData = sortDataBySesi(processedData)
 console.log(processedData);
+
+const sesi = ['Sesi 1', 'Sesi 2', 'Sesi 3', 'Sesi 4', 'Sesi 5', 'Sesi 6', 'Sesi 7', 'Sesi 8', 'Sesi 9', 'Sesi 10']
+const hari = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat']
+
+
+const formFormat = [
+    {
+        'label': "Unwanted Session",
+        'name': "unwanted_sesi",
+        'type': 'checkbox',
+        'hari': hari,
+        'sesi': sesi,
+    },
+    {
+        'label': "Ruangan",
+        'name': "ruangan",
+        'type': 'checkbox',
+        'ruangan': listRuangan
+    }
+]
+
+function processFormData(rawFormData) {
+    const processedFormData = { ...rawFormData };
+    const selectedDays = [];
+    const selectedSessions = [];
+
+    for (const key in processedFormData) {
+        if (processedFormData[key] === true && hari.includes(key)) {
+            selectedDays.push(key);
+            delete processedFormData[key];
+        }
+
+        if (processedFormData[key] === true && sesi.includes(key)) {
+            selectedSessions.push(key);
+            delete processedFormData[key];
+        }
+    }
+
+    if (selectedDays.length > 0 || selectedSessions.length > 0) {
+        processedFormData.preferensi = {};
+
+        if (selectedDays.length > 0) {
+            processedFormData.preferensi.hari = selectedDays;
+        }
+
+        if (selectedSessions.length > 0) {
+            processedFormData.preferensi.sesi = selectedSessions;
+        }
+    }
+
+    return processedFormData;
+}
+
+const onSubmit = async (formData) => {
+    const processedData = processFormData(formData)
+
+}
+
+
 </script>

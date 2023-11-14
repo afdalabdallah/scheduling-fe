@@ -21,6 +21,7 @@
                     <MenuCard title="Perkuliahan" text="Kelola perkuliahan" icon="/img/perkuliahan_icon.svg"
                         link="/perkuliahan" />
 
+
                 </div>
             </div>
         </div>

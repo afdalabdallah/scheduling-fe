@@ -53,7 +53,8 @@
                             </div>
 
                         </div>
-                        <div v-if="(data.type === 'checkbox' && table == 'dosen')" class="flex gap-5">
+                        <div v-if="(data.type === 'checkbox' && (table === 'dosen' || data.name === 'unwanted_sesi'))"
+                            class="flex gap-5">
                             <div>
                                 Hari
                                 <div v-for="(day, index) in data.hari" :key="index">
@@ -76,6 +77,19 @@
                                 </div>
 
                             </div>
+                        </div>
+                        <div v-if="(data.type === 'checkbox' && data.name === 'ruangan')" class="flex gap-5">
+                            <div class="gap-2 grid grid-cols-3">
+                                <div v-for="(ruangan, index) in data.ruangan" :key="index">
+                                    <div class="flex gap-1">
+                                        <input :id="`ruangan-${index}`" type="checkbox" v-model="formData[ruangan]"
+                                            :value="ruangan" />
+                                        <label :for="`ruangan-${index}`" class="font-normal">{{ ruangan }}</label>
+
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
