@@ -43,7 +43,6 @@
                                     <div v-if="sesiNotEmpty(sesi)" class="border border-slate-400">
                                         {{ sesi.mata_kuliah }}
                                         {{ sesi.dosen }}
-                                        {{ keySesi }}
                                     </div>
                                     <div v-else>&nbsp; </div>
                                 </div>
@@ -116,7 +115,7 @@ function sortedSesi(dataRuangan) {
 }
 
 const listSesi = [ //this will be fetched later from API
-    "01", "02", "03", "04", "05", "06", "07", "08", "09", "10"
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
 ]
 
 listHari.forEach((data) => {
@@ -152,11 +151,15 @@ mockData.forEach((data) => {
     const ruanganKey = data.ruangan
     const dayKey = data.sesi.charAt(0);
     const dayKeyStr = dayDict[dayKey]
+    let sesiKey
+    if (data.sesi.substring(1,4) == "10"){
+        sesiKey == data.sesi.substring(1, 4)
+    }else sesiKey = data.sesi[2]
     // console.log(data.sesi.substring(1, 4));
     // console.log(ruanganKey);
     // console.log(dayKey);
     // console.log(dayKeyStr);
-    processedData[dayKeyStr][ruanganKey][data.sesi.substring(1, 4)] = data
+    processedData[dayKeyStr][ruanganKey][sesiKey] = data
 })
 
 
