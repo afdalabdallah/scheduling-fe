@@ -74,7 +74,7 @@ const fetchMock = async () => {
     mockData = data.value.data
 }
 
-await fetchMock()
+// await fetchMock()
 
 
 
@@ -154,10 +154,6 @@ mockData.forEach((data) => {
     const ruanganKey = data.ruangan
     const dayKey = data.sesi.charAt(0);
     const dayKeyStr = dayDict[dayKey]
-    // console.log(data.sesi.substring(1, 4));
-    // console.log(ruanganKey);
-    // console.log(dayKey);
-    // console.log(dayKeyStr);
     processedData[dayKeyStr][ruanganKey][data.sesi.substring(1, 4)] = data
 })
 
@@ -201,7 +197,8 @@ function processFormData(rawFormData) {
             delete processedFormData[key];
         }
     }
-
+    console.log(selectedDays);
+    console.log(selectedSessions);
     if (selectedDays.length > 0 || selectedSessions.length > 0) {
         processedFormData.preferensi = {};
 
@@ -219,7 +216,8 @@ function processFormData(rawFormData) {
 
 const onSubmit = async (formData) => {
     const processedData = processFormData(formData)
-
+    console.log("Process Form Data");
+    console.log(processedData);
 }
 
 

@@ -53,8 +53,7 @@
                             </div>
 
                         </div>
-                        <div v-if="(data.type === 'checkbox' && (table === 'dosen' || data.name === 'unwanted_sesi'))"
-                            class="flex gap-5">
+                        <div v-if="(data.type === 'checkbox' && (table === 'dosen'))" class="flex gap-5">
                             <div>
                                 Hari
                                 <div v-for="(day, index) in data.hari" :key="index">
@@ -76,6 +75,36 @@
                                     </div>
                                 </div>
 
+                            </div>
+                        </div>
+                        <div v-if="data.name === 'unwanted_sesi'">
+                            <!-- <SessionModal @sesi-emit="handleUnwanted" v-bind:sesi="data.sesi" v-bind:hari="data.hari" />
+                            <div class="flex">
+                                <div v-for="unwanted in unwantedSessionData">
+                                    {{ unwanted.hari }}
+                                    {{ unwanted.sesi }}
+                                </div>
+                            </div> -->
+                            <form id="unwantedSession" @submit.prevent="handleUnwanted">
+                                <label>Hari</label>
+                                <select required class="w-full p-2 rounded-md border mb-4"
+                                    v-model="unwantedSesi.unwanted_hari">
+                                    <option v-for="hariAvailable in data.hari " :value="hariAvailable">{{ hariAvailable }}
+                                    </option>
+                                </select>
+                                <label>Sesi</label>
+                                <select required class="w-full p-2 rounded-md border" v-model="unwantedSesi.unwanted_sesi">
+                                    <option v-for="sesiAvailable in data.sesi " :value="sesiAvailable">{{ sesiAvailable }}
+                                    </option>
+                                </select>
+                                <button class="btn" type="submit">
+                                    add
+                                </button>
+                            </form>
+                            <div v-for="unwanted in unwantedSessionData">
+                                {{ unwanted.unwanted_hari }}
+                                {{ unwanted.unwanted_sesi }}
+                                ahhh
                             </div>
                         </div>
                         <div v-if="(data.type === 'checkbox' && data.name === 'ruangan')" class="flex gap-5">
@@ -116,6 +145,9 @@
 const emit = defineEmits(['inFocus', 'submit'])
 let show = true
 const formData = ref({})
+const unwantedSesi = ref({
+})
+let unwantedSessionData = []
 const props = defineProps(
     [
         'table',
@@ -126,6 +158,11 @@ const props = defineProps(
     ]
 )
 
+const handleUnwanted = () => {
+    unwantedSessionData.push(unwantedSesi.value)
+    console.log("Unwanted Session Array");
+    console.log(unwantedSessionData);
+}
 const submitForm = () => {
     // Emit the form data to the parent component
     emit('formSubmitted', formData.value);
