@@ -69,14 +69,6 @@
 <script setup>
 
 let mockData = reactive([])
-const fetchMock = async () => {
-    const { data } = await useFetch("http://localhost:3000/api/api.json");
-    mockData = data.value.data
-}
-
-// await fetchMock()
-
-
 
 let processedData = {}
 
@@ -181,43 +173,98 @@ const formFormat = [
     }
 ]
 
+const changeSesiFormat = (rawUnwantedSession) => {
+    const hariDict = {
+        "Senin": "1",
+        "Selasa": "2",
+        "Rabu": "3",
+        "Kamis": "4",
+        "Jumat": "5"
+    }
+
+    const sesiDict = {
+        "Sesi 1": "01",
+        "Sesi 2": "02",
+        "Sesi 3": "03",
+        "Sesi 4": "04",
+        "Sesi 5": "05",
+        "Sesi 6": "06",
+        "Sesi 7": "07",
+        "Sesi 8": "08",
+        "Sesi 9": "09",
+        "Sesi 10": "10"
+    }
+
+    let tempString = hariDict[rawUnwantedSession.unwanted_hari] + sesiDict[rawUnwantedSession.unwanted_sesi]
+    return tempString
+
+
+}
+
 function processFormData(rawFormData) {
     const processedFormData = { ...rawFormData };
-    const selectedDays = [];
+    const selectedRuangan = [];
     const selectedSessions = [];
 
     for (const key in processedFormData) {
-        if (processedFormData[key] === true && hari.includes(key)) {
-            selectedDays.push(key);
+        if (processedFormData[key] === true && listRuangan.includes(key) && key != "unwanted_sesi") {
+            selectedRuangan.push(key);
             delete processedFormData[key];
+        } else if (key === "unwanted_sesi") {
+            for (const unwanted of processedFormData[key]) {
+                let formattedSession = changeSesiFormat(unwanted)
+                selectedSessions.push(formattedSession)
+            }
         }
 
-        if (processedFormData[key] === true && sesi.includes(key)) {
-            selectedSessions.push(key);
-            delete processedFormData[key];
-        }
+
+
     }
-    console.log(selectedDays);
+    console.log("Selected Ruangan and Session");
+    console.log(selectedRuangan);
     console.log(selectedSessions);
-    if (selectedDays.length > 0 || selectedSessions.length > 0) {
-        processedFormData.preferensi = {};
+    // if (selectedRuangan.length > 0 || selectedSessions.length > 0) {
+    //     processedFormData.preferensi = {};
 
-        if (selectedDays.length > 0) {
-            processedFormData.preferensi.hari = selectedDays;
-        }
+    //     if (selectedDays.length > 0) {
+    //         processedFormData.preferensi.hari = selectedDays;
+    //     }
 
-        if (selectedSessions.length > 0) {
-            processedFormData.preferensi.sesi = selectedSessions;
-        }
-    }
+    //     if (selectedSessions.length > 0) {
+    //         processedFormData.preferensi.sesi = selectedSessions;
+    //     }
+    // }
+    processedFormData.ruangan = selectedRuangan
+    processedFormData.unwanted_sesi = selectedSessions
 
     return processedFormData;
 }
 
+const getFormatJadwal = async () => {
+    const { data } = await useFetch("http://localhost:3000/api/api.json");
+    mockData = data.value
+    console.log(mockData);
+}
+await getFormatJadwal()
+
+let geneticAlgorithmResult
 const onSubmit = async (formData) => {
-    const processedData = processFormData(formData)
-    console.log("Process Form Data");
+    console.log("Unprocessed");
+    console.log(formData);
+    let processedData = processFormData(formData)
+    console.log("Processed Form Data");
+    processedData.data = mockData
+    console.log("Body to model");
     console.log(processedData);
+    const { data } = await useFetch("http://localhost:3000/api/generate", {
+        method: "POST",
+        body: processedData,
+        headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
+    });
+    console.log("Hasil GA");
+    geneticAlgorithmResult = data
+    console.log(data);
+    location.reload()
 }
 
 

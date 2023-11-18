@@ -179,13 +179,11 @@ const formFormat = [
 const onSubmit = async (formData) => {
     console.log("INI FORM DATA DARI PAGE");
     console.log(formData);
+    let bodyArray = []
+    bodyArray.push(formData)
     const { respons } = await useFetch("http://localhost:3000/api/perkuliahan", {
         method: "POST",
-        body: {
-            dosen_id: formData.dosen_id,
-            kelas: formData.kelas,
-            mata_kuliah_id: formData.mata_kuliah_id
-        },
+        body: bodyArray,
         headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
     });
     console.log("INI RESPONSE");

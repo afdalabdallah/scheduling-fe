@@ -97,14 +97,14 @@
                                     <option v-for="sesiAvailable in data.sesi " :value="sesiAvailable">{{ sesiAvailable }}
                                     </option>
                                 </select>
-                                <button class="btn" type="submit">
+                                <button class="btn mt-2" type="submit">
                                     add
                                 </button>
                             </form>
                             <div v-for="unwanted in unwantedSessionData">
                                 {{ unwanted.unwanted_hari }}
                                 {{ unwanted.unwanted_sesi }}
-                                ahhh
+
                             </div>
                         </div>
                         <div v-if="(data.type === 'checkbox' && data.name === 'ruangan')" class="flex gap-5">
@@ -147,7 +147,7 @@ let show = true
 const formData = ref({})
 const unwantedSesi = ref({
 })
-let unwantedSessionData = []
+let unwantedSessionData = ref([])
 const props = defineProps(
     [
         'table',
@@ -158,10 +158,23 @@ const props = defineProps(
     ]
 )
 
+
 const handleUnwanted = () => {
-    unwantedSessionData.push(unwantedSesi.value)
+    let tempSesi = {
+        ...unwantedSesi.value
+    }
+    unwantedSessionData.value.push(tempSesi)
+
+
+    unwantedSesi.unwanted_hari = null;
+    unwantedSesi.unwanted_sesi = null;
+
     console.log("Unwanted Session Array");
     console.log(unwantedSessionData);
+    formData.value["unwanted_sesi"] = [...unwantedSessionData.value]
+    console.log(formData);
+
+
 }
 const submitForm = () => {
     // Emit the form data to the parent component
