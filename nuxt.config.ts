@@ -41,6 +41,11 @@ export default defineNuxtConfig({
       proxy: {
         to: "http://localhost:5000/**"
       }
+    },
+    '/api/generate':{
+      proxy: {
+        to: "http://127.0.0.1:8080/schedule"
+      }
     }
 
   }
