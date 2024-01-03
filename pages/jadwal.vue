@@ -222,17 +222,6 @@ function processFormData(rawFormData) {
     console.log("Selected Ruangan and Session");
     console.log(selectedRuangan);
     console.log(selectedSessions);
-    // if (selectedRuangan.length > 0 || selectedSessions.length > 0) {
-    //     processedFormData.preferensi = {};
-
-    //     if (selectedDays.length > 0) {
-    //         processedFormData.preferensi.hari = selectedDays;
-    //     }
-
-    //     if (selectedSessions.length > 0) {
-    //         processedFormData.preferensi.sesi = selectedSessions;
-    //     }
-    // }
     processedFormData.ruangan = selectedRuangan
     processedFormData.unwanted_sesi = selectedSessions
 
@@ -240,7 +229,7 @@ function processFormData(rawFormData) {
 }
 
 const getFormatJadwal = async () => {
-    const { data } = await useFetch("http://localhost:3000/api/api.json");
+    const { data } = await useFetch("http://localhost:3000/api/perkuliahan/jadwal");
     mockData = data.value
     console.log(mockData);
 }
@@ -263,7 +252,8 @@ const onSubmit = async (formData) => {
     console.log("Hasil GA");
     geneticAlgorithmResult = data
     console.log(data);
-    location.reload()
+    mockData = data
+    // location.reload()
 }
 
 
