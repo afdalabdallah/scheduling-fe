@@ -1,0 +1,1342 @@
+[
+  {
+    "ID": 1,
+    "CreatedAt": "2024-01-04T20:24:38.577+07:00",
+    "UpdatedAt": "2024-01-04T20:24:38.577+07:00",
+    "DeletedAt": null,
+    "data": [
+      {
+        "dosen": "IS",
+        "kelas": "ISIF4504I",
+        "mata_kuliah": "IF4504",
+        "ruangan": "104",
+        "sesi": "101",
+        "time": 0,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DP",
+        "kelas": "DPIF4957A",
+        "mata_kuliah": "IF4957",
+        "ruangan": "106",
+        "sesi": "101",
+        "time": 0,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "BA",
+        "kelas": "BAIF4405E",
+        "mata_kuliah": "IF4405",
+        "ruangan": "501",
+        "sesi": "102",
+        "time": 1,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RN",
+        "kelas": "RNIF4603C",
+        "mata_kuliah": "IF4603",
+        "ruangan": "108",
+        "sesi": "102",
+        "time": 1,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AY",
+        "kelas": "AYIF4403D",
+        "mata_kuliah": "IF4403",
+        "ruangan": "105",
+        "sesi": "103",
+        "time": 2,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "FB",
+        "kelas": "FBIF4504A",
+        "mata_kuliah": "IF4504",
+        "ruangan": "501",
+        "sesi": "103",
+        "time": 2,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RJ",
+        "kelas": "RJIF4971A",
+        "mata_kuliah": "IF4971",
+        "ruangan": "108",
+        "sesi": "103",
+        "time": 2,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "CF",
+        "kelas": "CFIF4958A",
+        "mata_kuliah": "IF4958",
+        "ruangan": "302",
+        "sesi": "103",
+        "time": 2,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "ST",
+        "kelas": "STIF4972A",
+        "mata_kuliah": "IF4972",
+        "ruangan": "111",
+        "sesi": "103",
+        "time": 2,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RR",
+        "kelas": "RRIF4963A",
+        "mata_kuliah": "IF4963",
+        "ruangan": "103",
+        "sesi": "104",
+        "time": 3,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RA",
+        "kelas": "RAIF4947A",
+        "mata_kuliah": "IF4947",
+        "ruangan": "101",
+        "sesi": "105",
+        "time": 4,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "SA",
+        "kelas": "SAIF4502A",
+        "mata_kuliah": "IF4502",
+        "ruangan": "102",
+        "sesi": "105",
+        "time": 4,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "IS",
+        "kelas": "ISIF4401G",
+        "mata_kuliah": "IF4401",
+        "ruangan": "501",
+        "sesi": "105",
+        "time": 4,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "HF",
+        "kelas": "HFIF4602B",
+        "mata_kuliah": "IF4602",
+        "ruangan": "107",
+        "sesi": "105",
+        "time": 4,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AB",
+        "kelas": "ABIF4401E",
+        "mata_kuliah": "IF4401",
+        "ruangan": "108",
+        "sesi": "105",
+        "time": 4,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "FB",
+        "kelas": "FBIF4406B",
+        "mata_kuliah": "IF4406",
+        "ruangan": "106",
+        "sesi": "106",
+        "time": 5,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "BM",
+        "kelas": "BMIF4402I",
+        "mata_kuliah": "IF4402",
+        "ruangan": "111",
+        "sesi": "106",
+        "time": 5,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "JL",
+        "kelas": "JLIF4405I",
+        "mata_kuliah": "IF4405",
+        "ruangan": "101",
+        "sesi": "107",
+        "time": 6,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "IM",
+        "kelas": "IMTI4411A",
+        "mata_kuliah": "TI4411",
+        "ruangan": "103",
+        "sesi": "107",
+        "time": 6,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "BS",
+        "kelas": "BSIF4701I",
+        "mata_kuliah": "IF4701",
+        "ruangan": "106",
+        "sesi": "107",
+        "time": 6,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DA",
+        "kelas": "DAIF4403A",
+        "mata_kuliah": "IF4403",
+        "ruangan": "301",
+        "sesi": "107",
+        "time": 6,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "WS",
+        "kelas": "WSIF4201E",
+        "mata_kuliah": "IF4201",
+        "ruangan": "112",
+        "sesi": "107",
+        "time": 6,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "MN",
+        "kelas": "MNIF4966A",
+        "mata_kuliah": "IF4966",
+        "ruangan": "104",
+        "sesi": "108",
+        "time": 7,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AW",
+        "kelas": "AWIF4604E",
+        "mata_kuliah": "IF4604",
+        "ruangan": "107",
+        "sesi": "108",
+        "time": 7,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DH",
+        "kelas": "DHIF4403F",
+        "mata_kuliah": "IF4403",
+        "ruangan": "112",
+        "sesi": "109",
+        "time": 8,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AB",
+        "kelas": "ABIF4401D",
+        "mata_kuliah": "IF4401",
+        "ruangan": "105",
+        "sesi": "110",
+        "time": 9,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DP",
+        "kelas": "DPIF4202C",
+        "mata_kuliah": "IF4202",
+        "ruangan": "107",
+        "sesi": "110",
+        "time": 9,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "ST",
+        "kelas": "STIF4406D",
+        "mata_kuliah": "IF4406",
+        "ruangan": "301",
+        "sesi": "110",
+        "time": 9,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "CF",
+        "kelas": "CFIF4403E",
+        "mata_kuliah": "IF4403",
+        "ruangan": "111",
+        "sesi": "110",
+        "time": 9,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "HT",
+        "kelas": "HTIF4952A",
+        "mata_kuliah": "IF4952",
+        "ruangan": "112",
+        "sesi": "110",
+        "time": 9,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "IS",
+        "kelas": "ISIF4401F",
+        "mata_kuliah": "IF4401",
+        "ruangan": "108",
+        "sesi": "201",
+        "time": 10,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "VH",
+        "kelas": "VHIF4604A",
+        "mata_kuliah": "IF4604",
+        "ruangan": "111",
+        "sesi": "202",
+        "time": 11,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AL",
+        "kelas": "ALIF4603A",
+        "mata_kuliah": "IF4603",
+        "ruangan": "112",
+        "sesi": "203",
+        "time": 12,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RM",
+        "kelas": "RMIF4602B",
+        "mata_kuliah": "IF4602",
+        "ruangan": "501",
+        "sesi": "205",
+        "time": 14,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RL",
+        "kelas": "RLIF4902A",
+        "mata_kuliah": "IF4902",
+        "ruangan": "108",
+        "sesi": "205",
+        "time": 14,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "HS",
+        "kelas": "HSIF4945A",
+        "mata_kuliah": "IF4945",
+        "ruangan": "103",
+        "sesi": "207",
+        "time": 16,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "VH",
+        "kelas": "VHIF4604C",
+        "mata_kuliah": "IF4604",
+        "ruangan": "108",
+        "sesi": "207",
+        "time": 16,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RL",
+        "kelas": "RLIF4401C",
+        "mata_kuliah": "IF4401",
+        "ruangan": "104",
+        "sesi": "208",
+        "time": 17,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AS",
+        "kelas": "ASIF4922A",
+        "mata_kuliah": "IF4922",
+        "ruangan": "105",
+        "sesi": "208",
+        "time": 17,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "SC",
+        "kelas": "SCTI4411B",
+        "mata_kuliah": "TI4411",
+        "ruangan": "501",
+        "sesi": "208",
+        "time": 17,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "HB",
+        "kelas": "HBIF4402E",
+        "mata_kuliah": "IF4402",
+        "ruangan": "106",
+        "sesi": "208",
+        "time": 17,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AB",
+        "kelas": "ABTI4411I",
+        "mata_kuliah": "TI4411",
+        "ruangan": "108",
+        "sesi": "208",
+        "time": 17,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AL",
+        "kelas": "ALIF4406I",
+        "mata_kuliah": "IF4406",
+        "ruangan": "111",
+        "sesi": "208",
+        "time": 17,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AB",
+        "kelas": "ABIF4401I",
+        "mata_kuliah": "IF4401",
+        "ruangan": "105",
+        "sesi": "209",
+        "time": 18,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "WS",
+        "kelas": "WSIF4201D",
+        "mata_kuliah": "IF4201",
+        "ruangan": "301",
+        "sesi": "301",
+        "time": 20,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DS",
+        "kelas": "DSIF4202F",
+        "mata_kuliah": "IF4202",
+        "ruangan": "112",
+        "sesi": "303",
+        "time": 22,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "IS",
+        "kelas": "ISIF4401H",
+        "mata_kuliah": "IF4401",
+        "ruangan": "102",
+        "sesi": "304",
+        "time": 23,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AW",
+        "kelas": "AWIF4405A",
+        "mata_kuliah": "IF4405",
+        "ruangan": "106",
+        "sesi": "304",
+        "time": 23,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "SR",
+        "kelas": "SRIF4406E",
+        "mata_kuliah": "IF4406",
+        "ruangan": "111",
+        "sesi": "304",
+        "time": 23,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "SR",
+        "kelas": "SRIF4406F",
+        "mata_kuliah": "IF4406",
+        "ruangan": "102",
+        "sesi": "305",
+        "time": 24,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "WS",
+        "kelas": "WSIF4402A",
+        "mata_kuliah": "IF4402",
+        "ruangan": "103",
+        "sesi": "305",
+        "time": 24,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "BA",
+        "kelas": "BAIF4405D",
+        "mata_kuliah": "IF4405",
+        "ruangan": "108",
+        "sesi": "305",
+        "time": 24,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "MN",
+        "kelas": "MNIF4404B",
+        "mata_kuliah": "IF4404",
+        "ruangan": "111",
+        "sesi": "305",
+        "time": 24,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "MN",
+        "kelas": "MNIF4605C",
+        "mata_kuliah": "IF4605",
+        "ruangan": "102",
+        "sesi": "306",
+        "time": 25,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "SC",
+        "kelas": "SCIF4404D",
+        "mata_kuliah": "IF4404",
+        "ruangan": "302",
+        "sesi": "306",
+        "time": 25,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DO",
+        "kelas": "DOIF4603F",
+        "mata_kuliah": "IF4603",
+        "ruangan": "111",
+        "sesi": "307",
+        "time": 26,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "VH",
+        "kelas": "VHIF4304A",
+        "mata_kuliah": "IF4304",
+        "ruangan": "101",
+        "sesi": "309",
+        "time": 28,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "YP",
+        "kelas": "YPIF4202B",
+        "mata_kuliah": "IF4202",
+        "ruangan": "102",
+        "sesi": "309",
+        "time": 28,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "TA",
+        "kelas": "TAIF4201G",
+        "mata_kuliah": "IF4201",
+        "ruangan": "103",
+        "sesi": "309",
+        "time": 28,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "SA",
+        "kelas": "SAIF4603C",
+        "mata_kuliah": "IF4603",
+        "ruangan": "501",
+        "sesi": "309",
+        "time": 28,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DS",
+        "kelas": "DSIF4404A",
+        "mata_kuliah": "IF4404",
+        "ruangan": "107",
+        "sesi": "310",
+        "time": 29,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DH",
+        "kelas": "DHIF4935A",
+        "mata_kuliah": "IF4935",
+        "ruangan": "111",
+        "sesi": "310",
+        "time": 29,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RA",
+        "kelas": "RAIF4201I",
+        "mata_kuliah": "IF4201",
+        "ruangan": "112",
+        "sesi": "310",
+        "time": 29,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "MM",
+        "kelas": "MMIF4914A",
+        "mata_kuliah": "IF4914",
+        "ruangan": "105",
+        "sesi": "401",
+        "time": 30,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "IM",
+        "kelas": "IMIF4933A",
+        "mata_kuliah": "IF4933",
+        "ruangan": "501",
+        "sesi": "401",
+        "time": 30,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "UY",
+        "kelas": "UYIF4603D",
+        "mata_kuliah": "IF4603",
+        "ruangan": "106",
+        "sesi": "401",
+        "time": 30,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AL",
+        "kelas": "ALIF4406C",
+        "mata_kuliah": "IF4406",
+        "ruangan": "107",
+        "sesi": "401",
+        "time": 30,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AB",
+        "kelas": "ABIF4502I",
+        "mata_kuliah": "IF4502",
+        "ruangan": "112",
+        "sesi": "401",
+        "time": 30,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "BS",
+        "kelas": "BSIF4913A",
+        "mata_kuliah": "IF4913",
+        "ruangan": "106",
+        "sesi": "402",
+        "time": 31,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AR",
+        "kelas": "ARIF4202D",
+        "mata_kuliah": "IF4202",
+        "ruangan": "501",
+        "sesi": "403",
+        "time": 32,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AW",
+        "kelas": "AWIF4604D",
+        "mata_kuliah": "IF4604",
+        "ruangan": "111",
+        "sesi": "403",
+        "time": 32,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "HF",
+        "kelas": "HFIF4601A",
+        "mata_kuliah": "IF4601",
+        "ruangan": "301",
+        "sesi": "404",
+        "time": 33,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "OJ",
+        "kelas": "OJIF4946A",
+        "mata_kuliah": "IF4946",
+        "ruangan": "101",
+        "sesi": "405",
+        "time": 34,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "HS",
+        "kelas": "HSIF4602D",
+        "mata_kuliah": "IF4602",
+        "ruangan": "501",
+        "sesi": "405",
+        "time": 34,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AR",
+        "kelas": "ARIF4202E",
+        "mata_kuliah": "IF4202",
+        "ruangan": "108",
+        "sesi": "405",
+        "time": 34,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "MK",
+        "kelas": "MKIF4404I",
+        "mata_kuliah": "IF4404",
+        "ruangan": "301",
+        "sesi": "405",
+        "time": 34,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AL",
+        "kelas": "ALIF4964F",
+        "mata_kuliah": "IF4964",
+        "ruangan": "101",
+        "sesi": "406",
+        "time": 35,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "NS",
+        "kelas": "NSIF4403C",
+        "mata_kuliah": "IF4403",
+        "ruangan": "102",
+        "sesi": "406",
+        "time": 35,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AM",
+        "kelas": "AMIF4402C",
+        "mata_kuliah": "IF4402",
+        "ruangan": "105",
+        "sesi": "406",
+        "time": 35,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "SA",
+        "kelas": "SAIF4934A",
+        "mata_kuliah": "IF4934",
+        "ruangan": "108",
+        "sesi": "406",
+        "time": 35,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "VH",
+        "kelas": "VHIF4604B",
+        "mata_kuliah": "IF4604",
+        "ruangan": "101",
+        "sesi": "407",
+        "time": 36,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "SR",
+        "kelas": "SRIF4404F",
+        "mata_kuliah": "IF4404",
+        "ruangan": "501",
+        "sesi": "407",
+        "time": 36,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "JL",
+        "kelas": "JLIF4921A",
+        "mata_kuliah": "IF4921",
+        "ruangan": "106",
+        "sesi": "407",
+        "time": 36,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "YP",
+        "kelas": "YPIF4101A",
+        "mata_kuliah": "IF4101",
+        "ruangan": "101",
+        "sesi": "408",
+        "time": 37,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "KR",
+        "kelas": "KRIF4404C",
+        "mata_kuliah": "IF4404",
+        "ruangan": "102",
+        "sesi": "408",
+        "time": 37,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "BS",
+        "kelas": "BSIF4602E",
+        "mata_kuliah": "IF4602",
+        "ruangan": "106",
+        "sesi": "408",
+        "time": 37,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RA",
+        "kelas": "RAIF4201A",
+        "mata_kuliah": "IF4201",
+        "ruangan": "107",
+        "sesi": "408",
+        "time": 37,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RJ",
+        "kelas": "RJIF4605E",
+        "mata_kuliah": "IF4605",
+        "ruangan": "108",
+        "sesi": "408",
+        "time": 37,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "SD",
+        "kelas": "SDIF4201A",
+        "mata_kuliah": "IF4201",
+        "ruangan": "301",
+        "sesi": "408",
+        "time": 37,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DA",
+        "kelas": "DAIF4951A",
+        "mata_kuliah": "IF4951",
+        "ruangan": "101",
+        "sesi": "409",
+        "time": 38,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "MN",
+        "kelas": "MNIF4605I",
+        "mata_kuliah": "IF4605",
+        "ruangan": "105",
+        "sesi": "409",
+        "time": 38,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DZ",
+        "kelas": "DZIF4304I",
+        "mata_kuliah": "IF4304",
+        "ruangan": "106",
+        "sesi": "409",
+        "time": 38,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AS",
+        "kelas": "ASIF4405C",
+        "mata_kuliah": "IF4405",
+        "ruangan": "302",
+        "sesi": "409",
+        "time": 38,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RJ",
+        "kelas": "RJIF4605D",
+        "mata_kuliah": "IF4605",
+        "ruangan": "111",
+        "sesi": "409",
+        "time": 38,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "MR",
+        "kelas": "MRIF4903A",
+        "mata_kuliah": "IF4903",
+        "ruangan": "112",
+        "sesi": "409",
+        "time": 38,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "SA",
+        "kelas": "SAIF4604D",
+        "mata_kuliah": "IF4604",
+        "ruangan": "104",
+        "sesi": "410",
+        "time": 39,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "WS",
+        "kelas": "WSIF4201C",
+        "mata_kuliah": "IF4201",
+        "ruangan": "105",
+        "sesi": "410",
+        "time": 39,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RL",
+        "kelas": "RLIF4982A",
+        "mata_kuliah": "IF4982",
+        "ruangan": "501",
+        "sesi": "410",
+        "time": 39,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DS",
+        "kelas": "DSIF4202G",
+        "mata_kuliah": "IF4202",
+        "ruangan": "108",
+        "sesi": "410",
+        "time": 39,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RN",
+        "kelas": "RNIF4404E",
+        "mata_kuliah": "IF4404",
+        "ruangan": "112",
+        "sesi": "410",
+        "time": 39,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "BA",
+        "kelas": "BAIF4405F",
+        "mata_kuliah": "IF4405",
+        "ruangan": "111",
+        "sesi": "501",
+        "time": 40,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RL",
+        "kelas": "RLIF4401B",
+        "mata_kuliah": "IF4401",
+        "ruangan": "112",
+        "sesi": "501",
+        "time": 40,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DZ",
+        "kelas": "DZIF4604I",
+        "mata_kuliah": "IF4604",
+        "ruangan": "103",
+        "sesi": "502",
+        "time": 41,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "BS",
+        "kelas": "BSIF4701A",
+        "mata_kuliah": "IF4701",
+        "ruangan": "301",
+        "sesi": "503",
+        "time": 42,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "BH",
+        "kelas": "BHIF4602I",
+        "mata_kuliah": "IF4602",
+        "ruangan": "103",
+        "sesi": "504",
+        "time": 43,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DA",
+        "kelas": "DAIF4403B",
+        "mata_kuliah": "IF4403",
+        "ruangan": "101",
+        "sesi": "507",
+        "time": 46,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AW",
+        "kelas": "AWIF4405B",
+        "mata_kuliah": "IF4405",
+        "ruangan": "105",
+        "sesi": "507",
+        "time": 46,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RN",
+        "kelas": "RNIF4603I",
+        "mata_kuliah": "IF4603",
+        "ruangan": "106",
+        "sesi": "507",
+        "time": 46,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "ML",
+        "kelas": "MLIF4101A",
+        "mata_kuliah": "IF4101",
+        "ruangan": "107",
+        "sesi": "507",
+        "time": 46,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "IM",
+        "kelas": "IMIF4985A",
+        "mata_kuliah": "IF4985",
+        "ruangan": "108",
+        "sesi": "507",
+        "time": 46,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DP",
+        "kelas": "DPIF4202I",
+        "mata_kuliah": "IF4202",
+        "ruangan": "301",
+        "sesi": "507",
+        "time": 46,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "BJ",
+        "kelas": "BJIF4402B",
+        "mata_kuliah": "IF4402",
+        "ruangan": "302",
+        "sesi": "507",
+        "time": 46,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "BJ",
+        "kelas": "BJIF4602C",
+        "mata_kuliah": "IF4602",
+        "ruangan": "106",
+        "sesi": "508",
+        "time": 47,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AB",
+        "kelas": "ABIF4605I",
+        "mata_kuliah": "IF4605",
+        "ruangan": "108",
+        "sesi": "508",
+        "time": 47,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "FB",
+        "kelas": "FBIF4605B",
+        "mata_kuliah": "IF4605",
+        "ruangan": "111",
+        "sesi": "508",
+        "time": 47,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "YP",
+        "kelas": "YPIF4202A",
+        "mata_kuliah": "IF4202",
+        "ruangan": "102",
+        "sesi": "509",
+        "time": 48,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "FB",
+        "kelas": "FBIF4406A",
+        "mata_kuliah": "IF4406",
+        "ruangan": "103",
+        "sesi": "509",
+        "time": 48,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "UY",
+        "kelas": "UYIF4603E",
+        "mata_kuliah": "IF4603",
+        "ruangan": "107",
+        "sesi": "509",
+        "time": 48,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "DA",
+        "kelas": "DAIF4986A",
+        "mata_kuliah": "IF4986",
+        "ruangan": "111",
+        "sesi": "509",
+        "time": 48,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "SC",
+        "kelas": "SCIF4403I",
+        "mata_kuliah": "IF4403",
+        "ruangan": "112",
+        "sesi": "509",
+        "time": 48,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "HB",
+        "kelas": "HBIF4402F",
+        "mata_kuliah": "IF4402",
+        "ruangan": "103",
+        "sesi": "510",
+        "time": 49,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "KR",
+        "kelas": "KRTI4411A",
+        "mata_kuliah": "TI4411",
+        "ruangan": "104",
+        "sesi": "510",
+        "time": 49,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RM",
+        "kelas": "RMIF4602A",
+        "mata_kuliah": "IF4602",
+        "ruangan": "107",
+        "sesi": "510",
+        "time": 49,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "FB",
+        "kelas": "FBIF4605A",
+        "mata_kuliah": "IF4605",
+        "ruangan": "108",
+        "sesi": "510",
+        "time": 49,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RL",
+        "kelas": "RLIF4401A",
+        "mata_kuliah": "IF4401",
+        "ruangan": "301",
+        "sesi": "510",
+        "time": 49,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "AM",
+        "kelas": "AMIF4402D",
+        "mata_kuliah": "IF4402",
+        "ruangan": "302",
+        "sesi": "510",
+        "time": 49,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "TA",
+        "kelas": "TAIF4201F",
+        "mata_kuliah": "IF4201",
+        "ruangan": "111",
+        "sesi": "510",
+        "time": 49,
+        "tipe": "jurusan"
+      },
+      {
+        "dosen": "RN",
+        "kelas": "RNIF4603B",
+        "mata_kuliah": "IF4603",
+        "ruangan": "112",
+        "sesi": "510",
+        "time": 49,
+        "tipe": "jurusan"
+      }
+    ],
+    "fitness": 90.11996685996898,
+    "violated_constraint": {
+      "first_constraint": 0,
+      "second_constraint": 0,
+      "third_constraint": 0,
+      "fourth_constraint": 85,
+      "fifth_constraint": 71
+    },
+    "skpb": [
+      {
+        "kelas": "A",
+        "kode_dosen": "SF",
+        "kode_mk": "UG9999",
+        "preferensi": [],
+        "ruangan": "999",
+        "rumpun": "SKPB",
+        "sesi": "101",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "B",
+        "kode_dosen": "SF",
+        "kode_mk": "UG9999",
+        "preferensi": [],
+        "ruangan": "999",
+        "rumpun": "SKPB",
+        "sesi": "103",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "A",
+        "kode_dosen": "SW",
+        "kode_mk": "UG9998",
+        "preferensi": [],
+        "ruangan": "998",
+        "rumpun": "SKPB",
+        "sesi": "107",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "A",
+        "kode_dosen": "SI",
+        "kode_mk": "UG9997",
+        "preferensi": [],
+        "ruangan": "997",
+        "rumpun": "SKPB",
+        "sesi": "201",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "A",
+        "kode_dosen": "SM",
+        "kode_mk": "UG9996",
+        "preferensi": [],
+        "ruangan": "996",
+        "rumpun": "SKPB",
+        "sesi": "203",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "A",
+        "kode_dosen": "SS",
+        "kode_mk": "UG9995",
+        "preferensi": [],
+        "ruangan": "999",
+        "rumpun": "SKPB",
+        "sesi": "207",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "B",
+        "kode_dosen": "SM",
+        "kode_mk": "UG9996",
+        "preferensi": [],
+        "ruangan": "996",
+        "rumpun": "SKPB",
+        "sesi": "209",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "A",
+        "kode_dosen": "UG",
+        "kode_mk": "UG9994",
+        "preferensi": [],
+        "ruangan": "994",
+        "rumpun": "SKPB",
+        "sesi": "209",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "C",
+        "kode_dosen": "SF",
+        "kode_mk": "UG9999",
+        "preferensi": [],
+        "ruangan": "999",
+        "rumpun": "SKPB",
+        "sesi": "301",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "D",
+        "kode_dosen": "SF",
+        "kode_mk": "UG9999",
+        "preferensi": [],
+        "ruangan": "999",
+        "rumpun": "SKPB",
+        "sesi": "303",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "B",
+        "kode_dosen": "SW",
+        "kode_mk": "UG9998",
+        "preferensi": [],
+        "ruangan": "998",
+        "rumpun": "SKPB",
+        "sesi": "305",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "B",
+        "kode_dosen": "SS",
+        "kode_mk": "UG9995",
+        "preferensi": [],
+        "ruangan": "995",
+        "rumpun": "SKPB",
+        "sesi": "307",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "C",
+        "kode_dosen": "SM",
+        "kode_mk": "UG9996",
+        "preferensi": [],
+        "ruangan": "996",
+        "rumpun": "SKPB",
+        "sesi": "403",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "B",
+        "kode_dosen": "UG",
+        "kode_mk": "UG9994",
+        "preferensi": [],
+        "ruangan": "994",
+        "rumpun": "SKPB",
+        "sesi": "405",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "B",
+        "kode_dosen": "SI",
+        "kode_mk": "UG9997",
+        "preferensi": [],
+        "ruangan": "997",
+        "rumpun": "SKPB",
+        "sesi": "501",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "A",
+        "kode_dosen": "SN",
+        "kode_mk": "UG9993",
+        "preferensi": [],
+        "ruangan": "993",
+        "rumpun": "SKPB",
+        "sesi": "503",
+        "tipe": "SK"
+      },
+      {
+        "kelas": "B",
+        "kode_dosen": "SN",
+        "kode_mk": "UG9993",
+        "preferensi": [],
+        "ruangan": "993",
+        "rumpun": "SKPB",
+        "sesi": "504",
+        "tipe": "SK"
+      }
+    ]
+  }
+]

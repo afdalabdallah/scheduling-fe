@@ -18,7 +18,9 @@
                     <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="Generate Jadwal"
                         table="jadwal" />
                 </div>
-                <table class="table table-sm table-fixed" v-if="mockData.length > 0">
+
+                <table class="table table-sm table-fixed" v-if="latestJadwal">
+
                     <thead class="bg-[#E9F4FF] text-black">
                         <tr>
                             <th>Hari</th>
@@ -44,13 +46,16 @@
                             </td>
                             <td v-for="(dataRuangan, keyRuangan) in hari">
                                 <div v-for="(sesi, keySesi) in dataRuangan" class="border border-slate-400">
+
                                     <div v-if="sesiNotEmpty(sesi)" class="border border-slate-400">
                                         {{ sesi.mata_kuliah }}
                                         {{ sesi.dosen }}
-                                    </div>
-                                    <div v-else>&nbsp; </div>
-                                </div>
 
+                                    </div>
+
+                                    <div v-else>&nbsp; </div>
+                                    {{ keySesi }}
+                                </div>
                             </td>
 
                         </tr>
@@ -67,7 +72,11 @@
 
 <script setup>
 
-let mockData = reactive([])
+
+
+// Start of utils
+
+let latestJadwal = reactive([])
 
 let processedData = {}
 
@@ -100,57 +109,6 @@ let listRuangan = []
 getListRuangan.forEach((ruangan) => {
     listRuangan.push(ruangan.nomor_ruangan)
 })
-
-function sortedSesi(dataRuangan) {
-    // Convert keys to integers and sort them numerically
-    const keys = Object.keys(dataRuangan).map(Number).sort((a, b) => a - b);
-    // Convert back to strings
-    return keys.map(String);
-}
-
-const listSesi = [ //this will be fetched later from API
-    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
-]
-
-listHari.forEach((data) => {
-    if (!processedData[data]) {
-        processedData[data] = {}
-    }
-
-    listRuangan.forEach((ruangan) => {
-        if (!processedData[data][ruangan]) {
-            processedData[data][ruangan] = {}
-        }
-        listSesi.forEach((sesi) => {
-            processedData[data][ruangan][sesi] = {}
-        })
-    })
-
-
-})
-
-
-
-mockData.sort((a, b) => {
-    const sesiA = parseInt(a.sesi)
-    const sesiB = parseInt(b.sesi)
-    return sesiA - sesiB
-})
-
-// console.log(processedData);
-// console.log("MockData");
-console.log(mockData)
-mockData.forEach((data) => {
-    // console.log(data);
-    const ruanganKey = data.ruangan
-    const dayKey = data.sesi.charAt(0);
-    const dayKeyStr = dayDict[dayKey]
-    processedData[dayKeyStr][ruanganKey][data.sesi.substring(1, 4)] = data
-})
-
-
-// // const sortedData = sortDataBySesi(processedData)
-console.log(processedData);
 
 const sesi = ['Sesi 1', 'Sesi 2', 'Sesi 3', 'Sesi 4', 'Sesi 5', 'Sesi 6', 'Sesi 7', 'Sesi 8', 'Sesi 9', 'Sesi 10']
 const hari = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat']
@@ -228,12 +186,68 @@ function processFormData(rawFormData) {
     return processedFormData;
 }
 
+function sortedSesi(dataRuangan) {
+    // Convert keys to integers and sort them numerically
+    const keys = Object.keys(dataRuangan).map(Number).sort((a, b) => a - b);
+    // Convert back to strings
+    return keys.map(String);
+}
+
+const listSesi = [ //this will be fetched later from API
+    "01", "02", "03", "04", "05", "06", "07", "08", "09", "10"
+]
+
+listHari.forEach((data) => {
+    if (!processedData[data]) {
+        processedData[data] = {}
+    }
+
+    listRuangan.forEach((ruangan) => {
+        if (!processedData[data][ruangan]) {
+            processedData[data][ruangan] = {}
+        }
+        listSesi.forEach((sesi) => {
+            processedData[data][ruangan][sesi] = {}
+        })
+    })
+
+
+})
+
+
+
+
+// // const sortedData = sortDataBySesi(processedData)
+console.log("Processed Data");
+console.log(processedData);
+
 const getFormatJadwal = async () => {
-    const { data } = await useFetch("http://localhost:3000/api/perkuliahan/jadwal");
-    mockData = data.value
-    console.log(mockData);
+    const { data } = await useFetch("http://localhost:3000/api/jadwal");
+    let dataLength = data.value.length;
+    latestJadwal = data.value[dataLength - 1].data
+    console.log("Fetching")
+    console.log(latestJadwal);
 }
 await getFormatJadwal()
+
+latestJadwal.sort((a, b) => {
+    const sesiA = parseInt(a.sesi)
+    const sesiB = parseInt(b.sesi)
+    return sesiA - sesiB
+})
+
+// console.log(processedData);
+console.log("latest jadwal");
+console.log(latestJadwal)
+latestJadwal.forEach((data) => {
+    // console.log(data);
+    const ruanganKey = data.ruangan
+    const dayKey = data.sesi.charAt(0);
+    const dayKeyStr = dayDict[dayKey]
+    processedData[dayKeyStr][ruanganKey][data.sesi.substring(1, 3)] = data
+})
+console.log("Processed Data Filled");
+console.log(processedData);
 
 let geneticAlgorithmResult
 const onSubmit = async (formData) => {
@@ -241,7 +255,7 @@ const onSubmit = async (formData) => {
     console.log(formData);
     let processedData = processFormData(formData)
     console.log("Processed Form Data");
-    processedData.data = mockData
+    processedData.data = latestJadwal
     console.log("Body to model");
     console.log(processedData);
     const { data } = await useFetch("http://localhost:3000/api/generate", {
@@ -252,8 +266,7 @@ const onSubmit = async (formData) => {
     console.log("Hasil GA");
     geneticAlgorithmResult = data
     console.log(data);
-    mockData = data
-    // location.reload()
+    location.reload()
 }
 
 
