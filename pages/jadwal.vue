@@ -4,19 +4,23 @@
         <div class="bg-white rounded-lg">
 
             <div class=" overflow-x-auto">
-                <!-- <div class="flex gap-2 justify-between pl-4 pr-4">
-                    <div>Hari</div>
-                    <div>Jam</div>
-                    <div v-for="ruangan in listRuangan">
-                        {{ ruangan }}
-                    </div>
-                </div>
-                <div class="grid">
-                  
-                </div> -->
+             
                 <div class="">
                     <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="Generate Jadwal"
                         table="jadwal" />
+                </div>
+                <div>
+                    <form id="selectJadwal" @submit.prevent="selectJadwal" >
+                        <select v-model="selectedJadwalID">
+                            <option v-for="jadwal in allJadwal" :key="jadwal.ID" :value="jadwal.ID">{{ jadwal.CreatedAt }}</option>
+                        </select><br>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div>
+                    Created at: {{ created_at.substring(0,10) }}
+                    <br/>
+                    
                 </div>
 
                 <table class="table table-sm table-fixed" v-if="latestJadwal">
@@ -45,17 +49,14 @@
                                 </div>
                             </td>
                             <td v-for="(dataRuangan, keyRuangan) in hari">
-                                <div v-for="(sesi, keySesi) in dataRuangan" class="border border-slate-400">
-
-                                    <div v-if="sesiNotEmpty(sesi)" class="border border-slate-400">
-                                        {{ sesi.mata_kuliah }}
-                                        {{ sesi.dosen }}
-
+                                <div v-for="sesi in listSesi" >
+                                    <div v-if="sesiNotEmpty(dataRuangan[sesi])" class="border border-slate-400">
+                                        {{ dataRuangan[sesi].mata_kuliah }}
+                                        {{ dataRuangan[sesi].dosen }}
                                     </div>
-
                                     <div v-else>&nbsp; </div>
-                                    {{ keySesi }}
                                 </div>
+                                
                             </td>
 
                         </tr>
@@ -71,12 +72,14 @@
 </template>
 
 <script setup>
+import { GeneratedIdentifierFlags } from 'typescript';
+
 
 
 
 // Start of utils
 
-let latestJadwal = reactive([])
+let formatJadwal = reactive([])
 
 let processedData = {}
 
@@ -158,8 +161,8 @@ const changeSesiFormat = (rawUnwantedSession) => {
 
 }
 
-function processFormData(rawFormData) {
-    const processedFormData = { ...rawFormData };
+function processFormData(rawFormData, formatJadwal) {
+    let processedFormData = { ...rawFormData };
     const selectedRuangan = [];
     const selectedSessions = [];
 
@@ -180,6 +183,7 @@ function processFormData(rawFormData) {
     console.log("Selected Ruangan and Session");
     console.log(selectedRuangan);
     console.log(selectedSessions);
+    processedFormData["data"] = formatJadwal
     processedFormData.ruangan = selectedRuangan
     processedFormData.unwanted_sesi = selectedSessions
 
@@ -221,52 +225,130 @@ listHari.forEach((data) => {
 console.log("Processed Data");
 console.log(processedData);
 
+
+
 const getFormatJadwal = async () => {
-    const { data } = await useFetch("http://localhost:3000/api/jadwal");
-    let dataLength = data.value.length;
-    latestJadwal = data.value[dataLength - 1].data
-    console.log("Fetching")
-    console.log(latestJadwal);
+    try {
+        const { data } = await useFetch("http://localhost:3000/api/perkuliahan/jadwal");
+        // console.log("Get Format Jadwal")
+        // console.log(data)
+        if (data && data.value && data.value.length > 0) {
+            let dataLength = data.value.length;
+            formatJadwal = data.value;
+            // unwanted_sesi = data.value[dataLength - 1].unwanted_sesi;
+            // list_ruangan = data.value[dataLength - 1].list_ruangan;
+            console.log("Fetching Format");
+            console.log(formatJadwal);
+        } else {
+            console.log("Data does not exist or is empty.");
+        }
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+};
+
+
+let fillDisplayData = (geneticResult) => {
+    geneticResult.forEach((data) => {
+        const ruanganKey = data.ruangan
+        const dayKey = data.sesi.charAt(0);
+        const dayKeyStr = dayDict[dayKey]
+        processedData[dayKeyStr][ruanganKey][data.sesi.substring(1, 3)] = data
+    })
+    return
 }
-await getFormatJadwal()
 
-latestJadwal.sort((a, b) => {
-    const sesiA = parseInt(a.sesi)
-    const sesiB = parseInt(b.sesi)
-    return sesiA - sesiB
-})
 
-// console.log(processedData);
-console.log("latest jadwal");
-console.log(latestJadwal)
-latestJadwal.forEach((data) => {
-    // console.log(data);
-    const ruanganKey = data.ruangan
-    const dayKey = data.sesi.charAt(0);
-    const dayKeyStr = dayDict[dayKey]
-    processedData[dayKeyStr][ruanganKey][data.sesi.substring(1, 3)] = data
-})
-console.log("Processed Data Filled");
-console.log(processedData);
+let latestJadwal = reactive([])
+let created_at = reactive("")
+let unwanted_sesi = reactive([])
+let list_ruangan = reactive([])
+const getLatestJadwal = async() => {
+     try {
+        const { data } = await useFetch("http://localhost:3000/api/jadwal");
+        // console.log("Get Format Jadwal")
+        // console.log(data)
+        if (data && data.value && data.value.length > 0) {
+            let dataLength = data.value.length;
+            latestJadwal = data.value[dataLength - 1];
+            unwanted_sesi = latestJadwal.unwanted_sesi;
+            list_ruangan = latestJadwal.list_ruangan;
+            created_at = latestJadwal.CreatedAt
+            fillDisplayData(latestJadwal.data)
+        } else {
+            console.log("Data does not exist or is empty.");
+        }
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+}
+await getLatestJadwal()
 
 let geneticAlgorithmResult
 const onSubmit = async (formData) => {
     console.log("Unprocessed");
     console.log(formData);
-    let processedData = processFormData(formData)
+    await getFormatJadwal()
+    let processedFormData = processFormData(formData, formatJadwal)
     console.log("Processed Form Data");
-    processedData.data = latestJadwal
+    // processedData.data = latestJadwal
     console.log("Body to model");
-    console.log(processedData);
-    const { data } = await useFetch("http://localhost:3000/api/generate", {
-        method: "POST",
-        body: processedData,
-        headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
-    });
+    console.log(processedFormData);
+    let data
+    try {
+        const response = await useFetch("http://localhost:3000/api/generate", {
+            method: "POST",
+            body: processedFormData,
+            headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
+        });
+        data = response.data
+        
+    }catch(error){
+        console.log("Error duriing API Called:", error)
+    }
     console.log("Hasil GA");
-    geneticAlgorithmResult = data
-    console.log(data);
+    // geneticAlgorithmResult = data
+    // console.log(geneticAlgorithmResult)
+    // fillDisplayData(geneticAlgorithmResult.value.data)
+    // console.log("Before reload")
     location.reload()
+    
+}
+
+let allJadwal = reactive([])
+const getAllJadwal = async() =>{
+     try {
+        const response = await useFetch("http://localhost:3000/api/jadwal/", {
+            method: "GET",
+            headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
+        });
+        allJadwal = response.data.value
+        console.log("All jadwal")
+        console.log(allJadwal)
+    } catch (error) {
+        console.log("Error during API Called:", error)
+    }
+}
+await getAllJadwal()
+
+let selectedJadwal= reactive([])
+let selectedJadwalID = reactive(NaN)
+const selectJadwal = async() =>{
+    console.log("Selected Jadwal")
+    console.log(selectedJadwalID)
+    try {
+        const response = await useFetch("http://localhost:3000/api/jadwal/" + selectedJadwalID, {
+            method: "GET",
+            headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
+        });
+        selectedJadwal= response.data.value.data
+        created_at = response.data.value.CreatedAt
+        console.log(response)
+        console.log("Selected data jadwal")
+        console.log(selectedJadwal)
+    } catch (error) {
+        console.log("Error during API Called:", error)
+    }
 }
 
 
