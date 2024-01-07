@@ -81,7 +81,7 @@ import { GeneratedIdentifierFlags } from 'typescript';
 
 let formatJadwal = reactive([])
 
-let processedData = {}
+let processedData = reactive({})
 
 const dayDict = {
     "1": "Senin",
@@ -201,22 +201,27 @@ const listSesi = [ //this will be fetched later from API
     "01", "02", "03", "04", "05", "06", "07", "08", "09", "10"
 ]
 
-listHari.forEach((data) => {
-    if (!processedData[data]) {
-        processedData[data] = {}
-    }
-
-    listRuangan.forEach((ruangan) => {
-        if (!processedData[data][ruangan]) {
-            processedData[data][ruangan] = {}
+const emptyProcessedData = () =>{
+    listHari.forEach((data) => {
+        if (!processedData[data]) {
+            processedData[data] = {}
         }
-        listSesi.forEach((sesi) => {
-            processedData[data][ruangan][sesi] = {}
+
+        listRuangan.forEach((ruangan) => {
+            if (!processedData[data][ruangan]) {
+                processedData[data][ruangan] = {}
+            }
+            listSesi.forEach((sesi) => {
+                processedData[data][ruangan][sesi] = {}
+            })
         })
+
+
     })
+}
+emptyProcessedData()
 
 
-})
 
 
 
@@ -249,6 +254,7 @@ const getFormatJadwal = async () => {
 
 
 let fillDisplayData = (geneticResult) => {
+    emptyProcessedData()
     geneticResult.forEach((data) => {
         const ruanganKey = data.ruangan
         const dayKey = data.sesi.charAt(0);
@@ -260,7 +266,7 @@ let fillDisplayData = (geneticResult) => {
 
 
 let latestJadwal = reactive([])
-let created_at = reactive("")
+let created_at = ref("")
 let unwanted_sesi = reactive([])
 let list_ruangan = reactive([])
 const getLatestJadwal = async() => {
@@ -273,7 +279,7 @@ const getLatestJadwal = async() => {
             latestJadwal = data.value[dataLength - 1];
             unwanted_sesi = latestJadwal.unwanted_sesi;
             list_ruangan = latestJadwal.list_ruangan;
-            created_at = latestJadwal.CreatedAt
+            created_at.value = latestJadwal.CreatedAt
             fillDisplayData(latestJadwal.data)
         } else {
             console.log("Data does not exist or is empty.");
@@ -342,10 +348,11 @@ const selectJadwal = async() =>{
             headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
         });
         selectedJadwal= response.data.value.data
-        created_at = response.data.value.CreatedAt
-        console.log(response)
+        created_at.value = response.data.value.CreatedAt
+        console.log(created_at)
         console.log("Selected data jadwal")
         console.log(selectedJadwal)
+        fillDisplayData(selectedJadwal)
     } catch (error) {
         console.log("Error during API Called:", error)
     }
