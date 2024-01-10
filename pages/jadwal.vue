@@ -4,23 +4,24 @@
         <div class="bg-white rounded-lg">
 
             <div class=" overflow-x-auto">
-             
+
                 <div class="">
                     <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="Generate Jadwal"
                         table="jadwal" />
                 </div>
                 <div>
-                    <form id="selectJadwal" @submit.prevent="selectJadwal" >
+                    <form id="selectJadwal" @submit.prevent="selectJadwal">
                         <select v-model="selectedJadwalID">
-                            <option v-for="jadwal in allJadwal" :key="jadwal.ID" :value="jadwal.ID">{{ jadwal.CreatedAt }}</option>
+                            <option v-for="jadwal in allJadwal" :key="jadwal.ID" :value="jadwal.ID">{{ jadwal.CreatedAt }}
+                            </option>
                         </select><br>
                         <button type="submit">Submit</button>
                     </form>
                 </div>
                 <div>
-                    Created at: {{ created_at.substring(0,10) }}
-                    <br/>
-                    
+                    Created at: {{ created_at.substring(0, 10) }}
+                    <br />
+
                 </div>
 
                 <table class="table table-sm table-fixed" v-if="latestJadwal">
@@ -49,14 +50,15 @@
                                 </div>
                             </td>
                             <td v-for="(dataRuangan, keyRuangan) in hari">
-                                <div v-for="sesi in listSesi" >
+                                <div v-for="sesi in listSesi">
                                     <div v-if="sesiNotEmpty(dataRuangan[sesi])" class="border border-slate-400">
                                         {{ dataRuangan[sesi].mata_kuliah }}
+                                        {{ dataRuangan[sesi].kelas }}
                                         {{ dataRuangan[sesi].dosen }}
                                     </div>
-                                    <div v-else>&nbsp; </div>
+                                    <div v-else>&nbsp; - </div>
                                 </div>
-                                
+
                             </td>
 
                         </tr>
@@ -201,7 +203,7 @@ const listSesi = [ //this will be fetched later from API
     "01", "02", "03", "04", "05", "06", "07", "08", "09", "10"
 ]
 
-const emptyProcessedData = () =>{
+const emptyProcessedData = () => {
     listHari.forEach((data) => {
         if (!processedData[data]) {
             processedData[data] = {}
@@ -269,8 +271,8 @@ let latestJadwal = reactive([])
 let created_at = ref("")
 let unwanted_sesi = reactive([])
 let list_ruangan = reactive([])
-const getLatestJadwal = async() => {
-     try {
+const getLatestJadwal = async () => {
+    try {
         const { data } = await useFetch("http://localhost:3000/api/jadwal");
         // console.log("Get Format Jadwal")
         // console.log(data)
@@ -308,8 +310,8 @@ const onSubmit = async (formData) => {
             headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
         });
         data = response.data
-        
-    }catch(error){
+
+    } catch (error) {
         console.log("Error duriing API Called:", error)
     }
     console.log("Hasil GA");
@@ -317,13 +319,13 @@ const onSubmit = async (formData) => {
     // console.log(geneticAlgorithmResult)
     // fillDisplayData(geneticAlgorithmResult.value.data)
     // console.log("Before reload")
-    location.reload()
-    
+    // location.reload()
+
 }
 
 let allJadwal = reactive([])
-const getAllJadwal = async() =>{
-     try {
+const getAllJadwal = async () => {
+    try {
         const response = await useFetch("http://localhost:3000/api/jadwal/", {
             method: "GET",
             headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
@@ -337,9 +339,9 @@ const getAllJadwal = async() =>{
 }
 await getAllJadwal()
 
-let selectedJadwal= reactive([])
+let selectedJadwal = reactive([])
 let selectedJadwalID = reactive(NaN)
-const selectJadwal = async() =>{
+const selectJadwal = async () => {
     console.log("Selected Jadwal")
     console.log(selectedJadwalID)
     try {
@@ -347,7 +349,7 @@ const selectJadwal = async() =>{
             method: "GET",
             headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
         });
-        selectedJadwal= response.data.value.data
+        selectedJadwal = response.data.value.data
         created_at.value = response.data.value.CreatedAt
         console.log(created_at)
         console.log("Selected data jadwal")
