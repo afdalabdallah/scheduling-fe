@@ -8,7 +8,9 @@
                 <div class="">
                     <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="Generate Jadwal"
                         table="jadwal" />
+                    <!-- <LoadingModal v-bind:showLoading="showLoading" /> -->
                 </div>
+                
                 <div>
                     <form id="selectJadwal" @submit.prevent="selectJadwal">
                         <select v-model="selectedJadwalID">
@@ -45,7 +47,7 @@
                                 {{ keyHari }}
                             </td>
                             <td>
-                                <div v-for="sesi in listSesi">
+                                <div class="border border-slate-400" v-for="sesi in listSesi">
                                     Sesi {{ sesi }}
                                 </div>
                             </td>
@@ -56,7 +58,7 @@
                                         {{ dataRuangan[sesi].kelas }}
                                         {{ dataRuangan[sesi].dosen }}
                                     </div>
-                                    <div v-else>&nbsp; - </div>
+                                    <div class="border border-slate-400" v-else>&nbsp; - </div>
                                 </div>
 
                             </td>
@@ -291,7 +293,7 @@ const getLatestJadwal = async () => {
     }
 }
 await getLatestJadwal()
-
+// let showLoading = ref(true)
 let geneticAlgorithmResult
 const onSubmit = async (formData) => {
     console.log("Unprocessed");
@@ -303,6 +305,7 @@ const onSubmit = async (formData) => {
     console.log("Body to model");
     console.log(processedFormData);
     let data
+    
     try {
         const response = await useFetch("http://localhost:3000/api/generate", {
             method: "POST",
@@ -310,15 +313,12 @@ const onSubmit = async (formData) => {
             headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
         });
         data = response.data
-
+        // showLoading.value = true
     } catch (error) {
         console.log("Error duriing API Called:", error)
     }
     console.log("Hasil GA");
-    // geneticAlgorithmResult = data
-    // console.log(geneticAlgorithmResult)
-    // fillDisplayData(geneticAlgorithmResult.value.data)
-    // console.log("Before reload")
+    // showLoading.value = false
     // location.reload()
 
 }
