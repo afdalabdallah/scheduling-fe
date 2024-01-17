@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <p class=" font-bold text-xl mb-1">RUMPUN MATA KULIAH</p>
+        <p class=" font-bold text-xl mb-1">RUANGAN</p>
         <div class="bg-white rounded-lg">
             <div class="min-[500px]:flex p-2 items-center gap-4 overflow-x-auto ">
                 <button

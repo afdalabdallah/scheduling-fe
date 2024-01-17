@@ -6,7 +6,7 @@
             <div class=" overflow-x-auto">
 
                 <div class="">
-                    <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="Generate Jadwal"
+                    <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="JADWAL"
                         table="jadwal" />
                     <!-- <LoadingModal v-bind:showLoading="showLoading" /> -->
                 </div>
@@ -301,7 +301,6 @@ const onSubmit = async (formData) => {
     await getFormatJadwal()
     let processedFormData = processFormData(formData, formatJadwal)
     console.log("Processed Form Data");
-    // processedData.data = latestJadwal
     console.log("Body to model");
     console.log(processedFormData);
     let data
@@ -313,13 +312,10 @@ const onSubmit = async (formData) => {
             headers: { "Access-Control-Allow-Origin": "*", 'Access-Control-Allow-Headers': '*', }
         });
         data = response.data
-        // showLoading.value = true
     } catch (error) {
         console.log("Error duriing API Called:", error)
     }
-    console.log("Hasil GA");
-    // showLoading.value = false
-    // location.reload()
+    location.reload()
 
 }
 
