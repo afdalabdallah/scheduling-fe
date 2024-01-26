@@ -7,10 +7,10 @@
 
                 <div class="">
                     <AddModal @formSubmitted="onSubmit" v-bind:form-format="formFormat" form-title="JADWAL"
-                        table="jadwal" />
+                        v-bind:show-loading="showLoading" table="jadwal" />
                     <!-- <LoadingModal v-bind:showLoading="showLoading" /> -->
                 </div>
-                
+
                 <div>
                     <form id="selectJadwal" @submit.prevent="selectJadwal">
                         <select v-model="selectedJadwalID">
@@ -293,7 +293,7 @@ const getLatestJadwal = async () => {
     }
 }
 await getLatestJadwal()
-// let showLoading = ref(true)
+let showLoading = ref(false)
 let geneticAlgorithmResult
 const onSubmit = async (formData) => {
     console.log("Unprocessed");
@@ -304,7 +304,7 @@ const onSubmit = async (formData) => {
     console.log("Body to model");
     console.log(processedFormData);
     let data
-    
+    showLoading.value = true
     try {
         const response = await useFetch("http://localhost:3000/api/generate", {
             method: "POST",
@@ -316,6 +316,7 @@ const onSubmit = async (formData) => {
         console.log("Error duriing API Called:", error)
     }
     location.reload()
+    showLoading.value = false
 
 }
 

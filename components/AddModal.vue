@@ -19,7 +19,8 @@
             <div class="mb-2 text-center text-cyan-400 text-2xl font-bold">
                 TAMBAH {{ formTitle }}
             </div>
-            <form @submit.prevent="submitForm">
+            <div v-if="showLoading == true">Generating Schedule...<br>Please wait</div>
+            <form v-else @submit.prevent="submitForm">
                 <div class="px-2 overflow-y-auto max-h-[500px]">
                     <div v-for="data in formFormat" class="mb-2">
                         <label>{{ data.label }}</label><br>
@@ -154,7 +155,8 @@ const props = defineProps(
         'formFormat',
         'formTitle',
         'dosenData',
-        'matkulData'
+        'matkulData',
+        'showLoading'
     ]
 )
 
